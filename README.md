@@ -1,2 +1,2 @@
 # devf.x
-Version X of dev.f website
+dev.f website version X
