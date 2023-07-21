@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev.f | Aprende tecnología</title>
+
+    <link rel="icon" type="image/x-icon" href="img/assets/favicon.png">
+    <link rel="stylesheet" href="atomic.css">
+
+    <style>
+         .gradient-div {
+      height: 8px;
+      background: linear-gradient(90deg, #00FFC7, #FF00FF, #6f00ff, #ffa600, #00FFC7); /* Added an extra color stop */
+      background-size: 400% 100%;
+      animation: gradientAnimation 10s linear infinite alternate; /* Adjust the duration (10s) as desired */
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+    
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div id="left" class="d-flex gap-4">
+            <img src="img/assets/white.png" alt="Logo dev.f mx">
+            <button class="btn third">Ir a campus</button>
+            <button class="btn third">Comunidad</button>
+        </div>
+        <div id="right" class="d-flex gap-4">
+            <button class="btn second">Contacta un asesor</button>
+            <button class="btn main">Inscríbete ahora</button>
+        </div>
+    </nav>
+
+    <div class="gradient-div"></div>
+
+    <header class="container p-10 d-flex flex-direction-column gap-6 text-center">
+        <h1>Aprende tecnología</h1>
+        <p>
+            Desde 2015 hemos capacitado a miles de hispanohablantes con cursos de programación, diseño y ciencia de datos.
+        </p>
+        <div class="grouping-horizontal">
+            <button class="btn second">ver programas</button>
+            <button class="btn main">Inscríbete ahora</button>
+        </div>
+    </header>
+
+    <section id="companies" class="container d-flex flex-direction-column gap-4">
+        <p class="text-center">Nuestros egresados trabajan en las empresas más innovadoras</p>
+        <div class="d-flex gap-5 justify-content-center">
+            <img src="img/assets/logo/google.png" alt="Logotipo Google" class="align-self-center">
+            <img src="img/assets/logo/facebook.png" alt="Logotipo Facebook" class="align-self-center">
+            <img src="img/assets/logo/microsoft.png" alt="Logotipo Microsoft" class="align-self-center">
+            <img src="img/assets/logo/uber.png" alt="Logotipo Uber" class="align-self-center">
+            <img src="img/assets/logo/amazon.png" alt="Logotipo Amazon" class="align-self-end">
+            <img src="img/assets/logo/apple.png" alt="Logotipo Apple Computer" class="align-self-center">
+        </div>
+        <button class="btn third align-self-center">ver más</button>
+    </section>
+
+    <section id="employability" class="container py-7 d-flex flex-direction-column gap-6">
+        <div class="card bg-primary">
+            <div id="info" class="p-8 text-center">
+                <h2>Habilidades de alto valor en el mercado laboral</h2>
+                <p>
+                    Capacítate en las tecnologías más modernas y demandas en la industria tecnológica de hoy... y mañana.
+                </p>
+            </div>
+            <div id="image" class="text-center">
+                <img src="img/photos/coding-and-design.png" alt="Ejemplos de código y diseño UX">
+            </div>
+        </div>
+        <div class="row gap-6">
+            <div class="card outline p-6">
+                <h3>Obtén experiencia mientras estudias</h3>
+                <p>
+                    Llegar a un proyecto con sólo conocimientos teóricos es sumamente difícil, por eso, en dev.f pondrás a prueba lo aprendido de manera constante en proyectos reales que serás capaz de exponer en tu próxima entrevista.
+                </p>
+            </div>
+            <div class="card outline p-6">
+                <h3>Consigue un mejor empleo</h3>
+                <p>
+                    El 80% de los egresados de dev.f encuentran empleo en el campo de la tecnología dentro de los primeros seis meses después de finalizar satisfactoriamente su programa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="container py-7 d-flex flex-direction-column gap-6">
+        <h4 class="text-center">Programas</h4>
+        <div class="card program">
+            <div class="d-flex">
+                <div class="bubbles">
+                    A
+                </div>
+                <div class="info p-6 text-left">
+                    <div class="">
+                        <p>master en</p>
+                        <h3>coding</h3>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Libero felis eget ut tempus pulvinar ut enim magna sed. Maecenas id diam quis orci. Id eu leo tempus non feugiat ac aenean.
+                    </p>
+                </div>
+            </div>
+            <div class="p-6">
+                <button class="btn main">Ver más</button>
+            </div>
+        </div>
+        <div class="card program">
+            <div class="d-flex">
+                <div class="bubbles">
+                    A
+                </div>
+                <div class="info p-6 text-left">
+                    <div class="">
+                        <p>master en</p>
+                        <h3>data science</h3>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Libero felis eget ut tempus pulvinar ut enim magna sed. Maecenas id diam quis orci. Id eu leo tempus non feugiat ac aenean.
+                    </p>
+                </div>
+            </div>
+            <div class="p-6">
+                <button class="btn main">Ver más</button>
+            </div>
+        </div>
+        <div class="card program">
+            <div class="d-flex">
+                <div class="bubbles">
+                    A
+                </div>
+                <div class="info p-6 text-left">
+                    <div class="">
+                        <p>master en</p>
+                        <h3>product design</h3>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Libero felis eget ut tempus pulvinar ut enim magna sed. Maecenas id diam quis orci. Id eu leo tempus non feugiat ac aenean.
+                    </p>
+                </div>
+            </div>
+            <div class="p-6">
+                <button class="btn main">Ver más</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="methodology" class="container py-7 d-flex flex-direction-column gap-6">
+        <h4 class="text-center">Metodología</h4>
+        <div class="card bg-primary">
+            <div id="info" class="p-8 text-center">
+                <h2>Aprende en vivo con personas como tú</h2>
+                <p>
+                    ¡Vive la experiencia de convivir con cientos de alumnos en toda América Latina y aprende en sesiones en vivo con tus profesores! Participa desde cualquier lugar, pregunta, aporta y colabora.
+                </p>
+            </div>
+            <div id="image" class="text-center">
+                <img src="img/photos/live-classes.png" alt="Ejemplos de código y diseño UX">
+            </div>
+        </div>
+        <div class="row gap-6">
+            <div class="card outline p-6">
+                <h3>Obtén experiencia mientras estudias</h3>
+                <p>
+                    Llegar a un proyecto con sólo conocimientos teóricos es sumamente difícil, por eso, en dev.f pondrás a prueba lo aprendido de manera constante en proyectos reales que serás capaz de exponer en tu próxima entrevista.
+                </p>
+            </div>
+            <div class="card outline p-6">
+                <h3>Consigue un mejor empleo</h3>
+                <p>
+                    El 80% de los egresados de dev.f encuentran empleo en el campo de la tecnología dentro de los primeros seis meses después de finalizar satisfactoriamente su programa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="container py-7 d-flex flex-direction-column gap-6">
+        <h4 class="text-center">Comunidad</h4>
+        <div class="card bg-dark">
+            <div id="info" class="p-8 text-center d-flex flex-direction-column gap-5">
+                <h2>Hackeando la educación desde 2015</h2>
+                <p>
+                    Nacimos en 2016 en Ciudad de México con la intención de cambiar el mundo y desde entonces hemos llevado la cultura del desarrollo tecnológico a decenas de miles de hispanohablantes en México, América Latina, Estados Unidos y Europa.
+                </p>
+                <button class="btn second align-self-center">ver más</button>
+            </div>
+            <div id="image" class="text-center">
+                <img src="img/photos/world.png" alt="Impacto global">
+            </div>
+        </div>
+        <div class="row gap-6">
+            <div class="card outline p-6 text-center">
+                <h2>12,000</h2>
+                <p>
+                    estudiantes han concluido sus cursos con nosotros
+                </p>
+            </div>
+            <div class="card outline p-6 text-center">
+                <h2>2,880,000</h2>
+                <p>
+                    horas de teoría y práctica completadas
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

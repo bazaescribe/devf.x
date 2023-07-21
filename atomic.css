@@ -1,0 +1,1363 @@
+/* ==================================== index ====================================
+  Imports
+  Root
+  HTML
+  Text
+    Text alignment
+    Text transformation
+    Lists
+  Background
+  Color
+    Font color
+  Padding
+  Flexbox
+  Grid
+  Buttons
+  Form controls
+  Navigation
+  Sections
+  Image handling (sizing and responsivness)
+  Shadows
+*/
+
+/* ==================================== imports ==================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+/* ==================================== ROOT ==================================== */
+/* Define variables here */
+
+:root{
+    --color-brand-main-030: #E3B6FF;
+    --color-brand-main-060: #D396FF; 
+    --color-brand-main-090: #BE76FF; 
+    --color-brand-main-100: #8F37FF; 
+    --color-brand-main-200: #750DDD; 
+    --color-brand-main-300: #6205AC;
+    --color-brand-main-400: #450070; 
+
+    --color-neutral-solid-00: #FFFFFF; 
+    --color-neutral-solid-10: #F0F2F5; 
+    --color-neutral-solid-20: #D1D7E0; 
+    --color-neutral-solid-30: #B3BDCB; 
+    --color-neutral-solid-40: #95A3B7; 
+    --color-neutral-solid-50: #7689A2; 
+    --color-neutral-solid-60: #48566A; 
+    --color-neutral-solid-70: #343E4C; 
+    --color-neutral-solid-80: #1F262D; 
+    --color-neutral-solid-90: #0A0D0F; 
+    --color-neutral-solid-100: #000000; 
+
+    --color-neutral-alpha-light-05: rgba(249, 250, 251, 0.05); 
+    --color-neutral-alpha-light-10: rgba(249, 250, 251, 0.1); 
+    --color-neutral-alpha-light-20: rgba(240, 242, 245, 0.2); 
+    --color-neutral-alpha-light-40: rgba(209, 215, 224, 0.4); 
+    --color-neutral-alpha-light-80: rgba(179, 189, 203, 0.8); 
+
+    --color-neutral-alpha-dark-05: rgba(10, 13, 15, 0.05); 
+    --color-neutral-alpha-dark-10: rgba(10, 13, 15, 0.1); 
+    --color-neutral-alpha-dark-20: rgba(10, 13, 15, 0.2); 
+    --color-neutral-alpha-dark-40: rgba(10, 13, 15, 0.4); 
+    --color-neutral-alpha-dark-80: rgba(10, 13, 15, 0.8); 
+
+    --color-status-success-50: #A5FFE9;
+    --color-status-success-100: #49F6AD;
+    --color-status-success-200: #33AC8F;
+
+    --color-status-warning-50: #FFFFCB;
+    --color-status-warning-100: #FCFC95;
+    --color-status-warning-200: #B9A165;
+
+    --color-status-danger-50: #FFC3A5;
+    --color-status-danger-100: #F67C49;
+    --color-status-danger-200: #AC5B33;
+
+    --color-status-info-50: #A5DDFF;
+    --color-status-info-100: #4990F6;
+    --color-status-info-200: #337FAC;
+
+    --gradient-light-1: linear-gradient(135deg, #DFDEFF, rgba(190, 175, 255, 0.8), #F5E3FF, rgba(253, 214, 250, 0.8), #FFDFE1);
+    --gradient-light-2: linear-gradient(180deg, #FFDECB 0%, #FFE870 100%);
+    --gradient-light-3: linear-gradient(180deg, #EDEBFF 0%, #FFC7C7 0.01%, #D6C2FF 100%);
+    --gradient-light-4: linear-gradient(180deg, #F8FFCB 0%, #70FFEE 100%);
+    --gradient-light-5: linear-gradient(180deg, #C7C6FF 0%, #92F8FF 100%);
+    --gradient-light-6: linear-gradient(135deg, #C797A6, rgba(164, 111, 146, 0.8), #E5B3B3, rgba(255, 194, 194, 0.8), #FFD6CE);
+    --gradient-light-7: linear-gradient(135deg, #FFEDD1, rgba(255, 237, 209, 0.8), #FFEFD8, rgba(255, 247, 227, 0.8), #FFFAED);
+    --gradient-light-8: linear-gradient(135deg, #B4D787, rgba(141, 175, 112, 0.8), #D9F1A7, rgba(238, 255, 195, 0.8), #FFFECA);
+
+    --gradient-dark-1: linear-gradient(135deg, #3D12A4, #8200BE, #A401CF);
+    --gradient-dark-2: linear-gradient(135deg, #124AA4, #4C00BE, #01CFB5);
+    --gradient-dark-3: linear-gradient(135deg, #A4124A, #BE0057, #CF0153);
+    --gradient-dark-4: linear-gradient(135deg, #4A77A4, #4C7EBE, #01CFA4);
+    --gradient-dark-5: linear-gradient(135deg, #A44A12, #BE4E00, #CFA401);
+    --gradient-dark-6: linear-gradient(135deg, #4AA412, #5EBE00, #01CFA4);
+    --gradient-dark-7: linear-gradient(135deg, #A4A412, #BEA400, #CFC601);
+    --gradient-dark-8: linear-gradient(135deg, #121212, #222222, #323232);
+
+    --gradient-v-1: linear-gradient(to bottom, #9B4F96, #FF6BAE);
+    --gradient-v-2: linear-gradient(to bottom, #403F8C, #00F1FF);
+    --gradient-v-3: linear-gradient(to bottom, #FFB800, #FF3C82);
+    --gradient-v-4: linear-gradient(to bottom, #B721FF, #FFD302);
+    --gradient-v-5: linear-gradient(to bottom, #1B998B, #00B4D8);
+
+    --gradient-background-light: linear-gradient(180deg, #FFFFFF 0%, #EFEFF5 100%);
+    --gradient-background-dark: linear-gradient(180deg, #3B3F4B 0%, #262831 100%);
+
+    --radius-1: 0.25rem;
+    --radius-2: 0.5rem;
+    --radius-3: 0.75rem;
+    --radius-4: 1rem;
+    --radius-5: 1.5rem;
+    --radius-6: 2rem;
+    --radius-7: 4rem;
+    --radius-8: 8rem;
+    --radius-9: 10rem;
+    --radius-10: 12rem;
+
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.5rem;
+    --spacing-6: 2rem;
+    --spacing-7: 4rem;
+    --spacing-8: 8rem;
+    --spacing-9: 10rem;
+    --spacing-10: 12rem;
+}
+
+::selection {
+  background-color: var(--color-brand-main-030); /* set the background color of the selected text */
+  color: #000; /* set the text color of the selected text */
+  text-shadow: none; /* remove any text shadow on the selected text */
+}
+
+
+/* ==================================== HTML ==================================== */
+/* Default styles for the HTML element */
+
+html, body { 
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto';
+    background: var(--color-neutral-solid-100);
+    color: var(--color-neutral-solid-00);
+}
+
+/* ==================================== text ==================================== */
+/* Text size and transformation */
+
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0px;
+  font-family: 'Poppins';
+}
+
+/* h1.serif, h2.serif, h3.serif, h4.serif, h5.serif, h6.serif{
+  font-family: 'Poppins';
+  font-weight: 700;
+} */
+
+h1{ font-size: 6rem; font-weight: 700;}
+h2{ font-size: 4em; font-weight: 700;}
+h3{ font-size: 3rem; font-weight: 700;}
+h4{ font-size: 2rem; font-weight: 700;}
+h5{ font-size: 1.5rem; font-weight: 700;}
+h6{ font-size: 1.125rem; font-weight: 700;}
+
+
+@media screen and (max-width: 768px) { 
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.25rem; }
+  h6 { font-size: 1rem; }
+}
+
+.quote{ font-size: 1.25rem; font-family: 'Roboto Slab'; }
+
+.caption{ font-size: 0.875rem; }
+
+.small{ font-size: 0.75rem; }
+
+.overline{ font-size: 0.625rem; }
+
+.right{ text-align: right; }
+
+.left{ text-align: left;}
+
+.center{ text-align: center; }
+
+.right{ text-align: right; }
+
+.justify{ text-align: justify; }
+
+.bold{ font-weight: bold; }
+
+.italic{ font-style: italic; }
+
+.underline{ text-decoration: underline; }
+
+.capitalize{ text-transform: capitalize; }
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+li::before {
+  content: '';
+  display: inline-block;
+  width: 20px; /* Adjust the width of the bullet image */
+  height: 20px; /* Adjust the height of the bullet image */
+  background-image: url('img/bullet.png'); /* Replace with your image */
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-clipcta: content-box;
+  margin-right: 10px; /* Adjust the spacing between the bullet and text */
+}
+
+img {
+  -webkit-image-orientation: from-image; /* Safari */
+          image-orientation: from-image; /* Standard */
+}
+
+
+/* ==================================== background ==================================== */
+/* SECTION DESCRIPTION HERE */
+
+.bg-primary { background-color: var(--color-brand-main-100); }
+.bg-secondary { background-color: var(--color-brand-main-300); }
+.bg-white { background-color: var(--color-neutral-solid-00); }
+.bg-light { background-color: var(--color-neutral-solid-10); }
+.bg-dark { background-color: var(--color-neutral-solid-90); }
+
+.bg-gradient-light-1 { background-image: var(--gradient-light-1); }
+.bg-gradient-light-2 { background-image: var(--gradient-light-2); }
+.bg-gradient-light-3 { background-image: var(--gradient-light-3); }
+.bg-gradient-light-4 { background-image: var(--gradient-light-4); }
+.bg-gradient-light-5 { background-image: var(--gradient-light-5); }
+.bg-gradient-light-6 { background-image: var(--gradient-light-6); }
+.bg-gradient-light-7 { background-image: var(--gradient-light-7); }
+.bg-gradient-light-8 { background-image: var(--gradient-light-8); }
+
+.bg-gradient-dark-1 {
+  background-image: var(--gradient-dark-1);
+}
+
+.bg-gradient-dark-2 {
+  background-image: var(--gradient-dark-2);
+}
+
+.bg-gradient-dark-3 {
+  background-image: var(--gradient-dark-3);
+}
+
+.bg-gradient-dark-4 {
+  background-image: var(--gradient-dark-4);
+}
+
+.bg-gradient-dark-5 {
+  background-image: var(--gradient-dark-5);
+}
+
+.bg-gradient-dark-6 {
+  background-image: var(--gradient-dark-6);
+}
+
+.bg-gradient-dark-7 {
+  background-image: var(--gradient-dark-7);
+}
+
+.bg-gradient-dark-8 {
+  background-image: var(--gradient-dark-8);
+}
+
+
+
+.bg-gradient-v-1 {
+  background-image: var(--gradient-v-1);
+}
+
+.bg-gradient-v-2 {
+  background-image: var(--gradient-v-2);
+}
+
+.bg-gradient-v-3 {
+  background-image: var(--gradient-v-3);
+}
+
+.bg-gradient-v-4 {
+  background-image: var(--gradient-v-4);
+}
+
+.bg-gradient-v-5 {
+  background-image: var(--gradient-v-5);
+}
+
+.bg-gradient-light{
+  background-image: var(--gradient-background-light);
+}
+
+.transition {
+  background: linear-gradient(180deg, var(--color1) 49.48%, #FFFFFF 49.49%);
+}
+
+.transition-light {
+  --color1: var(--color-neutral-solid-10);
+}
+
+.transition-dark {
+  --color1: var(--color-neutral-solid-80);
+}
+
+
+/* ==================================== font color ==================================== */
+/* SECTION DESCRIPTION HERE */
+
+.text-light{
+  color: var(--color-neutral-solid-00);
+}
+
+.text-subtle-light{
+  color: var(--color-neutral-alpha-light-40);
+}
+
+.text-subtle-dark{
+  color: var(--color-neutral-alpha-dark-40);
+}
+
+.text-gradient {
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+
+/* ==================================== padding & margin ==================================== */
+/* SECTION DESCRIPTION HERE */
+
+/* Spacing */
+
+/* Margin */
+.m-1 { margin: var(--spacing-1); }
+.m-2 { margin: var(--spacing-2); }
+.m-3 { margin: var(--spacing-3); }
+.m-4 { margin: var(--spacing-4); }
+.m-5 { margin: var(--spacing-5); }
+.m-6 { margin: var(--spacing-6); }
+.m-7 { margin: var(--spacing-7); }
+.m-8 { margin: var(--spacing-8); }
+.m-9 { margin: var(--spacing-9); }
+.m-10 { margin: var(--spacing-10); }
+
+/* Margin - Vertical */
+.my-1 { margin-top: var(--spacing-1); margin-bottom: var(--spacing-1); }
+.my-2 { margin-top: var(--spacing-2); margin-bottom: var(--spacing-2); }
+.my-3 { margin-top: var(--spacing-3); margin-bottom: var(--spacing-3); }
+.my-4 { margin-top: var(--spacing-4); margin-bottom: var(--spacing-4); }
+.my-5 { margin-top: var(--spacing-5); margin-bottom: var(--spacing-5); }
+.my-6 { margin-top: var(--spacing-6); margin-bottom: var(--spacing-6); }
+.my-7 { margin-top: var(--spacing-7); margin-bottom: var(--spacing-7); }
+.my-8 { margin-top: var(--spacing-8); margin-bottom: var(--spacing-8); }
+.my-9 { margin-top: var(--spacing-9); margin-bottom: var(--spacing-9); }
+.my-10 { margin-top: var(--spacing-10); margin-bottom: var(--spacing-10); }
+
+/* Margin - Horizontal */
+.mx-1 { margin-left: var(--spacing-1); margin-right: var(--spacing-1); }
+.mx-2 { margin-left: var(--spacing-2); margin-right: var(--spacing-2); }
+.mx-3 { margin-left: var(--spacing-3); margin-right: var(--spacing-3); }
+.mx-4 { margin-left: var(--spacing-4); margin-right: var(--spacing-4); }
+.mx-5 { margin-left: var(--spacing-5); margin-right: var(--spacing-5); }
+.mx-6 { margin-left: var(--spacing-6); margin-right: var(--spacing-6); }
+.mx-7 { margin-left: var(--spacing-7); margin-right: var(--spacing-7); }
+.mx-8 { margin-left: var(--spacing-8); margin-right: var(--spacing-8); }
+.mx-9 { margin-left: var(--spacing-9); margin-right: var(--spacing-9); }
+.mx-10 { margin-left: var(--spacing-10); margin-right: var(--spacing-10); }
+
+/* Margin - Top */
+.mt-1 { margin-top: var(--spacing-1); }
+.mt-2 { margin-top: var(--spacing-2); }
+.mt-3 { margin-top: var(--spacing-3); }
+.mt-4 { margin-top: var(--spacing-4); }
+.mt-5 { margin-top: var(--spacing-5); }
+.mt-6 { margin-top: var(--spacing-6); }
+.mt-7 { margin-top: var(--spacing-7); }
+.mt-8 { margin-top: var(--spacing-8); }
+.mt-9 { margin-top: var(--spacing-9); }
+.mt-10 { margin-top: var(--spacing-10); }
+
+/* Margin - Bottom */
+.mb-1 { margin-bottom: var(--spacing-1); }
+.mb-2 { margin-bottom: var(--spacing-2); }
+.mb-3 { margin-bottom: var(--spacing-3); }
+.mb-4 { margin-bottom: var(--spacing-4); }
+.mb-5 { margin-bottom: var(--spacing-5); }
+.mb-6 { margin-bottom: var(--spacing-6); }
+.mb-7 { margin-bottom: var(--spacing-7); }
+.mb-8 { margin-bottom: var(--spacing-8); }
+.mb-9 { margin-bottom: var(--spacing-9); }
+.mb-10 { margin-bottom: var(--spacing-10); }
+
+/* Margin - Left */
+.ml-1 { margin-left: var(--spacing-1); }
+.ml-2 { margin-left: var(--spacing-2); }
+.ml-3 { margin-left: var(--spacing-3); }
+.ml-4 { margin-left: var(--spacing-4); }
+.ml-5 { margin-left: var(--spacing-5); }
+.ml-6 { margin-left: var(--spacing-6); }
+.ml-7 { margin-left: var(--spacing-7); }
+.ml-8 { margin-left: var(--spacing-8); }
+.ml-9 { margin-left: var(--spacing-9); }
+.ml-10 { margin-left: var(--spacing-10); }
+
+/* Margin - Right */
+.mr-1 { margin-right: var(--spacing-1); }
+.mr-2 { margin-right: var(--spacing-2); }
+.mr-3 { margin-right: var(--spacing-3); }
+.mr-4 { margin-right: var(--spacing-4); }
+.mr-5 { margin-right: var(--spacing-5); }
+.mr-6 { margin-right: var(--spacing-6); }
+.mr-7 { margin-right: var(--spacing-7); }
+.mr-8 { margin-right: var(--spacing-8); }
+.mr-9 { margin-right: var(--spacing-9); }
+.mr-10 { margin-right: var(--spacing-10); }
+
+/* Padding */
+.p-1 { padding: var(--spacing-1); }
+.p-2 { padding: var(--spacing-2); }
+.p-3 { padding: var(--spacing-3); }
+.p-4 { padding: var(--spacing-4); }
+.p-5 { padding: var(--spacing-5); }
+.p-6 { padding: var(--spacing-6); }
+.p-7 { padding: var(--spacing-7); }
+.p-8 { padding: var(--spacing-8); }
+.p-9 { padding: var(--spacing-9); }
+.p-10 { padding: var(--spacing-10); }
+
+/* Padding - Vertical */
+.py-1 { padding-top: var(--spacing-1); padding-bottom: var(--spacing-1); }
+.py-2 { padding-top: var(--spacing-2); padding-bottom: var(--spacing-2); }
+.py-3 { padding-top: var(--spacing-3); padding-bottom: var(--spacing-3); }
+.py-4 { padding-top: var(--spacing-4); padding-bottom: var(--spacing-4); }
+.py-5 { padding-top: var(--spacing-5); padding-bottom: var(--spacing-5); }
+.py-6 { padding-top: var(--spacing-6); padding-bottom: var(--spacing-6); }
+.py-7 { padding-top: var(--spacing-7); padding-bottom: var(--spacing-7); }
+.py-8 { padding-top: var(--spacing-8); padding-bottom: var(--spacing-8); }
+.py-9 { padding-top: var(--spacing-9); padding-bottom: var(--spacing-9); }
+.py-10 { padding-top: var(--spacing-10); padding-bottom: var(--spacing-10); }
+
+/* Padding - Horizontal */
+.px-1 { padding-left: var(--spacing-1); padding-right: var(--spacing-1); }
+.px-2 { padding-left: var(--spacing-2); padding-right: var(--spacing-2); }
+.px-3 { padding-left: var(--spacing-3); padding-right: var(--spacing-3); }
+.px-4 { padding-left: var(--spacing-4); padding-right: var(--spacing-4); }
+.px-5 { padding-left: var(--spacing-5); padding-right: var(--spacing-5); }
+.px-6 { padding-left: var(--spacing-6); padding-right: var(--spacing-6); }
+.px-7 { padding-left: var(--spacing-7); padding-right: var(--spacing-7); }
+.px-8 { padding-left: var(--spacing-8); padding-right: var(--spacing-8); }
+.px-9 { padding-left: var(--spacing-9); padding-right: var(--spacing-9); }
+.px-10 { padding-left: var(--spacing-10); padding-right: var(--spacing-10); }
+
+/* Padding - Top */
+.pt-1 { padding-top: var(--spacing-1); }
+.pt-2 { padding-top: var(--spacing-2); }
+.pt-3 { padding-top: var(--spacing-3); }
+.pt-4 { padding-top: var(--spacing-4); }
+.pt-5 { padding-top: var(--spacing-5); }
+.pt-6 { padding-top: var(--spacing-6); }
+.pt-7 { padding-top: var(--spacing-7); }
+.pt-8 { padding-top: var(--spacing-8); }
+.pt-9 { padding-top: var(--spacing-9); }
+.pt-10 { padding-top: var(--spacing-10); }
+
+/* Padding - Bottom */
+.pb-1 { padding-bottom: var(--spacing-1); }
+.pb-2 { padding-bottom: var(--spacing-2); }
+.pb-3 { padding-bottom: var(--spacing-3); }
+.pb-4 { padding-bottom: var(--spacing-4); }
+.pb-5 { padding-bottom: var(--spacing-5); }
+.pb-6 { padding-bottom: var(--spacing-6); }
+.pb-7 { padding-bottom: var(--spacing-7); }
+.pb-8 { padding-bottom: var(--spacing-8); }
+.pb-9 { padding-bottom: var(--spacing-9); }
+.pb-10 { padding-bottom: var(--spacing-10); }
+
+/* Padding - Left */
+.pl-1 { padding-left: var(--spacing-1); }
+.pl-2 { padding-left: var(--spacing-2); }
+.pl-3 { padding-left: var(--spacing-3); }
+.pl-4 { padding-left: var(--spacing-4); }
+.pl-5 { padding-left: var(--spacing-5); }
+.pl-6 { padding-left: var(--spacing-6); }
+.pl-7 { padding-left: var(--spacing-7); }
+.pl-8 { padding-left: var(--spacing-8); }
+.pl-9 { padding-left: var(--spacing-9); }
+.pl-10 { padding-left: var(--spacing-10); }
+
+/* Padding - Right */
+.pr-1 { padding-right: var(--spacing-1); }
+.pr-2 { padding-right: var(--spacing-2); }
+.pr-3 { padding-right: var(--spacing-3); }
+.pr-4 { padding-right: var(--spacing-4); }
+.pr-5 { padding-right: var(--spacing-5); }
+.pr-6 { padding-right: var(--spacing-6); }
+.pr-7 { padding-right: var(--spacing-7); }
+.pr-8 { padding-right: var(--spacing-8); }
+.pr-9 { padding-right: var(--spacing-9); }
+.pr-10 { padding-right: var(--spacing-10); }
+
+/* Gap */
+/* Gap */
+.gap-1 { gap: var(--spacing-1); }
+.gap-2 { gap: var(--spacing-2); }
+.gap-3 { gap: var(--spacing-3); }
+.gap-4 { gap: var(--spacing-4); }
+.gap-5 { gap: var(--spacing-5); }
+.gap-6 { gap: var(--spacing-6); }
+.gap-7 { gap: var(--spacing-7); }
+.gap-8 { gap: var(--spacing-8); }
+.gap-9 { gap: var(--spacing-9); }
+.gap-10 { gap: var(--spacing-10); }
+
+
+/* Text Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+
+/* ==================================== flexbox ==================================== */
+/* Classes to use as flexbox configurations */
+
+/* Flex Container */
+
+.d-flex {
+    display: flex;
+  }
+  
+  .flex-direction-row {
+    flex-direction: row;
+  }
+  
+  .flex-direction-row-reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .flex-direction-column {
+    flex-direction: column;
+  }
+  
+  .flex-direction-column-reverse {
+    flex-direction: column-reverse;
+  }
+  
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  
+  .flex-nowrap {
+    flex-wrap: nowrap;
+  }
+  
+  .flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+  
+  .justify-content-center {
+    justify-content: center;
+  }
+  
+  .justify-content-start {
+    justify-content: flex-start;
+  }
+  
+  .justify-content-end {
+    justify-content: flex-end;
+  }
+  
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  
+  .justify-content-around {
+    justify-content: space-around;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .align-items-start {
+    align-items: flex-start;
+  }
+  
+  .align-items-end {
+    align-items: flex-end;
+  }
+  
+  .align-items-baseline {
+    align-items: baseline;
+  }
+  
+  .align-items-stretch {
+    align-items: stretch;
+  }
+  
+  .align-content-center {
+    align-content: center;
+  }
+  
+  .align-content-start {
+    align-content: flex-start;
+  }
+  
+  .align-content-end {
+    align-content: flex-end;
+  }
+  
+  .align-content-between {
+    align-content: space-between;
+  }
+  
+  .align-content-around {
+    align-content: space-around;
+  }
+  
+  .align-content-stretch {
+    align-content: stretch;
+  }
+  
+  /* Flex Item */
+
+  .order-1 {
+    order: 1;
+  }
+  
+  .order-2 {
+    order: 2;
+  }
+  
+  .order-3 {
+    order: 3;
+  }
+  
+  .order-4 {
+    order: 4;
+  }
+  
+  .order-5 {
+    order: 5;
+  }
+  
+  .order-6 {
+    order: 6;
+  }
+  
+  .order-7 {
+    order: 7;
+  }
+  
+  .order-8 {
+    order: 8;
+  }
+  
+  .order-9 {
+    order: 9;
+  }
+  
+  .order-10 {
+    order: 10;
+  }
+  
+  .flex-grow-1 {
+    flex-grow: 1;
+  }
+  
+  .flex-shrink-1 {
+    flex-shrink: 1;
+  }
+  
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+  
+  .align-self-center {
+    align-self: center;
+  }
+  
+  .align-self-start {
+    align-self: flex-start;
+  }
+  
+  .align-self-end {
+    align-self: flex-end;
+  }
+  
+  .align-self-stretch {
+    align-self: stretch;
+  }
+
+/* ==================================== grid ==================================== */
+/* Classes to use to create grid layouts */
+
+/* Basic Grid */
+.d-grid {
+  display: grid;
+}
+
+/* Grid with Three Columns */
+.grid-three-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Grid with Two Columns */
+.grid-two-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Grid with Equal Rows */
+.grid-equal-rows {
+  grid-auto-rows: 1fr;
+}
+
+/* Grid with Fixed Row Height */
+.grid-fixed-row-height {
+  grid-auto-rows: 100px; /* Adjust the height as needed */
+}
+
+/* Grid Gap */
+.grid-gap {
+  gap: 1rem; /* Adjust the gap size as needed */
+}
+
+/* Grid Item Spanning Multiple Columns */
+.grid-item-span-two-columns {
+  grid-column: span 2;
+}
+
+/* Grid Item Spanning Multiple Rows */
+.grid-item-span-two-rows {
+  grid-row: span 2;
+}
+
+@media (max-width: 767px) {
+  .d-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  
+  .grid-item {
+    margin-bottom: 10px;
+  }
+}
+
+/* ==================================== buttons ==================================== */
+/* SECTION DESCRIPTION HERE */
+
+  .btn {
+    border-radius: var(--radius-2);
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    transition: 300ms ease-out all;
+  }
+
+  a.btn{
+    line-height: 44px;
+  }
+  
+  /* Types */
+
+  .btn.cta {
+    background: var(--color-brand-main-100);
+    color: var(--color-neutral-solid-00);
+    border-color: var(--color-brand-main-100);
+    box-shadow: 0px 12px 48px -16px var(--color-brand-main-100);
+    transition: 300ms ease all;
+  }
+
+  .btn.cta:hover, 
+  .btn.cta:focus {
+    background-color: var(--color-brand-main-200);
+    box-shadow: 0px 12px 48px -12px var(--color-brand-main-100);
+  }
+
+  .btn.main {
+    background: var(--color-brand-main-100);
+    color: var(--color-neutral-solid-00);
+    border-color: var(--color-brand-main-100);
+  }
+  
+  .btn.main:hover, 
+  .btn.main:focus {
+    background-color: var(--color-brand-main-200);
+  }
+  
+  .btn.main:active {
+    background-color: var(--color-brand-main-300);
+  }
+
+  .btn.main.light {
+    background: var(--color-neutral-solid-00);
+    color: var(--color-brand-main-100); 
+  }
+  
+  .btn.main.light:hover, 
+  .btn.main.light:focus {
+    background: var(--color-neutral-solid-10);
+  }
+  
+  .btn.main.light:active {
+    background: var(--color-neutral-solid-30);
+  }
+  
+  .btn.main-destructive {
+    background-color: var(--color-status-danger-100);
+    color: var(--color-neutral-solid-00);
+  }
+  
+  .btn.main-destructive:hover {
+    background: var(--color-status-danger-200);
+  }
+
+  .btn.second {
+    color: white;
+    background: none;
+    border: 1px solid var(--color-neutral-alpha-light-20);
+  }
+  
+  .btn.second:hover,
+  .btn.second:focus {
+    border: 1px solid var(--color-neutral-alpha-light-20);
+    background: var(--color-neutral-alpha-light-10);
+  }
+
+  .btn.second.light {
+    border: 1px solid var(--color-neutral-alpha-light-40);
+    color: var(--color-neutral-solid-00);
+    background: none;
+  }
+  
+  .btn.second.light:hover,
+  .btn.second.light:focus {
+    background: var(--color-neutral-alpha-light-10);
+  }
+  
+  .btn.second-destructive {
+    background: none;
+    border: 1px solid var(--color-status-danger-100);
+    color: var(--color-status-danger-100);
+  }
+
+  .btn.second-destructive:hover {
+    background: var(--color-neutral-alpha-dark-10);
+  }
+
+  .btn.second-destructive.light {
+    background: none;
+    border: 1px solid var(--color-status-danger-50);
+    color: var(--color-status-danger-50);
+  }
+
+  .btn.second-destructive.light:hover {
+    background-color: var(--color-neutral-alpha-light-10);
+  }
+  
+  .btn.third {
+    border: none;
+    background: none;
+    color: var(--color-neutral-solid-00);
+  }
+  
+  .btn.third:hover,
+  .btn.third:focus {
+    background-color: var(--color-neutral-alpha-light-10);
+  }
+
+  .btn.third.light {
+    border: none;
+    background: none;
+    color: var(--color-neutral-solid-00);
+  }
+  
+  .btn.third.light:hover,
+  .btn.third.light:focus {
+    background-color: var(--color-neutral-alpha-light-10);
+  }
+  
+  .btn.third-destructive {
+    border: none;
+    background: none;
+    color: var(--color-status-danger-100);
+  }
+
+  .btn.third-destructive:hover,
+  .btn.third-destructive:focus {
+    background-color: var(--color-neutral-alpha-dark-10);
+  }
+
+  .btn.third-destructive.light {
+    border: none;
+    background: none;
+    color: var(--color-status-danger-50);
+  }
+
+  .btn.third-destructive.light:hover,
+  .btn.third-destructive.light:focus {
+    background-color: var(--color-neutral-alpha-light-10);
+  }
+  
+  /* Sizes */
+  
+  .btn.big {
+    width: 100%;
+    padding: 24px 32px;
+    font-size: 14px;
+  }
+
+
+/* ==================================== controls ==================================== */
+/* SECTION DESCRIPTION HERE */
+
+select{
+    padding: 11px 1rem;
+    border-radius: var(--radius-2);
+    outline: none;
+    border: none;
+}
+
+select.light{
+    background: var(--color-neutral-alpha-light-10);
+    color: var(--color-neutral-solid-00);
+    border: 1px solid var(--color-neutral-alpha-light-10);
+}
+
+.chirp{
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
+    border-radius: var(--radius-4);
+    background: var(--color-brand-main-100);
+    color: var(--color-neutral-solid-00);
+}
+
+.weekly-selector{
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-5);
+  gap: var(--spacing-4);
+  justify-content: center;
+  border: 1px solid var(--color-neutral-alpha-dark-10);
+  border-radius: var(--radius-3);
+  flex-wrap: wrap;
+}
+
+.weekly-selector #month{
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+#day-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.day-container {
+  /* Agrega los estilos que desees para el contenedor de cada día */
+  /* Por ejemplo, cambiar el color de fondo, el espaciado, etc. */
+  padding: var(--spacing-2);
+  cursor: pointer; /* Cambiar el cursor a una mano para indicar que es clickeable */
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-2) var(--spacing-4);
+  gap: var(--spacing-3);
+  align-items: center;
+  border-radius: var(--radius-2);
+  border: 1px solid var(--color-neutral-alpha-dark-10);
+}
+
+.day-container .name {
+  font-size: 12px;
+  color: var(--color-neutral-alpha-dark-40);
+}
+
+.date {
+  /* Estilos para el número de la fecha */
+  /* Por ejemplo, cambiar color, fuente, etc. */
+}
+
+.day-container.checked{
+  background: var(--color-brand-main-100);
+  color: var(--color-neutral-solid-00);
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.20);
+}
+
+.day-container.checked .name{
+  color: var(--color-neutral-alpha-light-80);
+}
+
+.day-container.disabled{
+  background: var(--color-neutral-alpha-dark-10);
+  color: var(--color-neutral-alpha-dark-40);
+}
+
+/* Ocultar el radio button */
+input[type="radio"] {
+  display: none;
+}
+
+/* ==================================== navigation ==================================== */
+/* SECTION DESCRIPTION HERE */
+
+nav{
+  padding: 1rem 4rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(64px);
+}
+
+nav img{
+  display: block;
+  max-width: 9rem;
+  object-fit: contain; /* or object-fit: cover; */
+}
+
+nav a{
+  text-decoration: none;
+  line-height:normal !important;
+}
+
+nav.light{
+  background: var(--color-neutral-solid-10);
+}
+
+.navigation-menu{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navigation-menu .tab-link{
+  display: flex;
+  flex-direction: row;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+  width: 100%;
+  height: 43px;
+
+  background: none;
+  border-radius: var(--radius-2);
+  color: white;
+}
+
+.navigation-menu .tab-link:hover {
+  background: var(--color-neutral-alpha-light-10);
+}
+
+.navigation-menu .tab-link.selected {
+  background: var(--color-neutral-alpha-light-20);
+}
+
+@media screen and (max-width: 768px) { 
+  nav{
+    padding: 1rem;
+  }
+  
+  nav menu {
+    background: red;
+    display: none;
+  }
+}
+
+.grouping-horizontal{
+    display: flex;
+    gap: var(--spacing-4);
+    align-self: center;
+}
+
+.grouping-vertical{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+footer{
+  /* something */
+  background: linear-gradient(180deg, #FFF 0%, #EEE 100%);
+}
+
+footer img{
+  display: block;
+  max-width: 9rem;
+  object-fit: contain; /* or object-fit: cover; */
+}
+
+footer menu{
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-7);
+  color: red;
+}
+
+footer menu a{
+  color: var(--color-neutral-solid-60);
+  text-decoration: none;
+  background-size: 0% 100%;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: color 0.2s ease-in-out;
+  /* Use the -webkit prefix for better browser support */
+  /* The above two properties will make the text color transparent, so the gradient can show through */
+  display: inline-block; /* add display inline-block to make the link occupy only the necessary space */
+}
+
+footer menu a:hover{
+  color: var(--color-brand-main-100);
+}
+
+@media screen and (max-width: 768px) { 
+  footer{
+    padding-bottom: 6rem;
+  }
+}
+
+/* ==================================== sections ==================================== */
+/* SECTION DESCRIPTION HERE */
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header.light{
+  background: var(--color-neutral-solid-10);
+}
+
+header.dark{
+  background: var(--color-neutral-solid-80);
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.container{
+  width: 95%;
+  max-width: 1100px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row{
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.row > * {
+    flex: 1; /* This distributes equal width among child elements */
+    box-sizing: border-box; /* To include padding and border in the width calculation */
+}
+
+.card{
+  border-radius: var(--radius-6);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card.outline{
+  border: 1px solid var(--color-neutral-alpha-light-20);
+}
+
+.card.box{
+  border: 1px solid var(--neutral-alpha-dark-10, rgba(0, 1, 5, 0.08));
+  background: var(--neutral-alpha-dark-4, rgba(0, 1, 5, 0.04));
+}
+
+.section-title{
+  text-align: center;
+}
+
+.auto-size{
+  flex: 1;
+}
+
+.card.action-card{
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.program{
+    background: var(--color-neutral-solid-00);
+    color: var(--color-neutral-solid-100);
+    display: flex;
+    justify-content: space-between;
+}
+
+.program .info{
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+}
+
+.program .bubbles{
+    background: red;
+    width: 240px;
+}
+
+@media screen and (max-width: 768px) { 
+  .hero .cta{
+    flex-direction: column;
+  }
+  
+  .auto-size {
+    flex: none;
+    width: 100%;
+  }
+
+  .container{
+    flex-wrap: wrap;
+  }
+
+  .row{
+    flex-direction: column;
+  }
+}
+
+.floating-actions {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 67.44%);
+}
+
+@media screen and (max-width: 768px) {
+  .floating-actions {
+    display: block;
+  }
+}
+
+
+
+
+/* ==================================== image handling ==================================== */
+/* SECTION DESCRIPTION HERE */
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==================================== shadows ==================================== */
+/* SECTION DESCRIPTION HERE */
+
+/* Class to create a small shadow box that makes the element look closer */
+.shadow-small-closer {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Class to create a medium shadow box that makes the element look closer */
+.shadow-medium-closer {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Class to create a large shadow box that makes the element look closer */
+.shadow-large-closer {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Class to create a small shadow box that makes the element look farther */
+.shadow-small-farther {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Class to create a medium shadow box that makes the element look farther */
+.shadow-medium-farther {
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Class to create a large shadow box that makes the element look farther */
+.shadow-large-farther {
+  box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+/* ==================================== effects ==================================== */
+/* SECTION DESCRIPTION HERE */
+
+.glow-on-hover {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+.glow-on-hover:hover {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.7);
+  transform: translateY(-3px);
+}
+.glow-on-hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  transition: opacity 0.2s ease-in-out;
+}
+.glow-on-hover:hover:after {
+  opacity: 1;
+}
