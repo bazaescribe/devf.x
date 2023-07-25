@@ -64,6 +64,12 @@
     --color-neutral-alpha-dark-40: rgba(10, 13, 15, 0.4); 
     --color-neutral-alpha-dark-80: rgba(10, 13, 15, 0.8); 
 
+    --color-aux-a: #00A3FF;
+    --color-aux-b: #D1F2A6;
+    --color-aux-c: #FFC2D9;
+    --color-aux-d: #6663FF;
+    --color-aux-e: #F2CAA6;
+
     --color-status-success-50: #A5FFE9;
     --color-status-success-100: #49F6AD;
     --color-status-success-200: #33AC8F;
@@ -242,6 +248,13 @@ img {
 .bg-light { background-color: var(--color-neutral-solid-10); }
 .bg-dark { background-color: var(--color-neutral-solid-90); }
 
+.bg-aux-a { background-color: var(--color-aux-a); }
+.bg-aux-b { background-color: var(--color-aux-b); }
+.bg-aux-c { background-color: var(--color-aux-c); }
+.bg-aux-d { background-color: var(--color-aux-d); }
+.bg-aux-e { background-color: var(--color-aux-e); }
+
+
 .bg-gradient-light-1 { background-image: var(--gradient-light-1); }
 .bg-gradient-light-2 { background-image: var(--gradient-light-2); }
 .bg-gradient-light-3 { background-image: var(--gradient-light-3); }
@@ -251,89 +264,44 @@ img {
 .bg-gradient-light-7 { background-image: var(--gradient-light-7); }
 .bg-gradient-light-8 { background-image: var(--gradient-light-8); }
 
-.bg-gradient-dark-1 {
-  background-image: var(--gradient-dark-1);
-}
+.bg-gradient-dark-1 { background-image: var(--gradient-dark-1); }
+.bg-gradient-dark-2 { background-image: var(--gradient-dark-2); }
+.bg-gradient-dark-3 { background-image: var(--gradient-dark-3); }
+.bg-gradient-dark-4 { background-image: var(--gradient-dark-4); }
+.bg-gradient-dark-5 { background-image: var(--gradient-dark-5); }
+.bg-gradient-dark-6 { background-image: var(--gradient-dark-6); }
+.bg-gradient-dark-7 { background-image: var(--gradient-dark-7); }
+.bg-gradient-dark-8 { background-image: var(--gradient-dark-8); }
 
-.bg-gradient-dark-2 {
-  background-image: var(--gradient-dark-2);
-}
+.bg-gradient-v-1 { background-image: var(--gradient-v-1); }
+.bg-gradient-v-2 { background-image: var(--gradient-v-2); }
+.bg-gradient-v-3 { background-image: var(--gradient-v-3); }
+.bg-gradient-v-4 { background-image: var(--gradient-v-4); }
+.bg-gradient-v-5 { background-image: var(--gradient-v-5); }
 
-.bg-gradient-dark-3 {
-  background-image: var(--gradient-dark-3);
-}
+.bg-gradient-light { background-image: var(--gradient-background-light); }
 
-.bg-gradient-dark-4 {
-  background-image: var(--gradient-dark-4);
-}
-
-.bg-gradient-dark-5 {
-  background-image: var(--gradient-dark-5);
-}
-
-.bg-gradient-dark-6 {
-  background-image: var(--gradient-dark-6);
-}
-
-.bg-gradient-dark-7 {
-  background-image: var(--gradient-dark-7);
-}
-
-.bg-gradient-dark-8 {
-  background-image: var(--gradient-dark-8);
-}
-
-
-
-.bg-gradient-v-1 {
-  background-image: var(--gradient-v-1);
-}
-
-.bg-gradient-v-2 {
-  background-image: var(--gradient-v-2);
-}
-
-.bg-gradient-v-3 {
-  background-image: var(--gradient-v-3);
-}
-
-.bg-gradient-v-4 {
-  background-image: var(--gradient-v-4);
-}
-
-.bg-gradient-v-5 {
-  background-image: var(--gradient-v-5);
-}
-
-.bg-gradient-light{
-  background-image: var(--gradient-background-light);
-}
-
-.transition {
-  background: linear-gradient(180deg, var(--color1) 49.48%, #FFFFFF 49.49%);
-}
-
-.transition-light {
-  --color1: var(--color-neutral-solid-10);
-}
-
-.transition-dark {
-  --color1: var(--color-neutral-solid-80);
-}
+.transition { background: linear-gradient(180deg, var(--color1) 49.48%, #FFFFFF 49.49%); }
+.transition-light { --color1: var(--color-neutral-solid-10); }
+.transition-dark { --color1: var(--color-neutral-solid-80); }
 
 
 /* ==================================== font color ==================================== */
 /* SECTION DESCRIPTION HERE */
 
-.text-light{
+.text-main-light{
   color: var(--color-neutral-solid-00);
 }
 
-.text-subtle-light{
+.text-main-dark{
+    color: var(--color-neutral-solid-100);
+}
+
+.text-secondary-light{
   color: var(--color-neutral-alpha-light-40);
 }
 
-.text-subtle-dark{
+.text-secondary-dark{
   color: var(--color-neutral-alpha-dark-40);
 }
 
@@ -817,11 +785,12 @@ img {
   
   .btn.main:active {
     background-color: var(--color-brand-main-300);
+    border-color: var(--color-brand-main-100);
   }
 
   .btn.main.light {
     background: var(--color-neutral-solid-00);
-    color: var(--color-brand-main-100); 
+    color: var(--color-brand-main-060); 
   }
   
   .btn.main.light:hover, 
@@ -1112,7 +1081,7 @@ nav.light{
 
 footer{
   /* something */
-  background: linear-gradient(180deg, #FFF 0%, #EEE 100%);
+  background: none
 }
 
 footer img{
@@ -1130,7 +1099,7 @@ footer menu{
 }
 
 footer menu a{
-  color: var(--color-neutral-solid-60);
+  color: var(--color-neutral-alpha-light-80);
   text-decoration: none;
   background-size: 0% 100%;
   background-position: 0 100%;
@@ -1143,6 +1112,30 @@ footer menu a{
 
 footer menu a:hover{
   color: var(--color-brand-main-100);
+}
+
+footer .awards{
+    display: flex;
+    gap: var(--spacing-6);
+    color: var(--color-neutral-alpha-light-40);
+    flex-wrap: wrap;
+}
+
+footer .awards .award{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+footer #social{
+    background: var(--color-neutral-solid-90);
+    border-radius: var(--radius-4);
+}
+
+footer #social a{
+    color: var(--color-neutral-solid-00);
+    text-decoration: none;
 }
 
 @media screen and (max-width: 768px) { 
@@ -1176,7 +1169,6 @@ header.dark{
   align-items: center;
   gap: 1rem;
 }
-
 
 .container{
   width: 95%;
@@ -1212,6 +1204,15 @@ header.dark{
   background: var(--neutral-alpha-dark-4, rgba(0, 1, 5, 0.04));
 }
 
+.info-card .image{
+    text-align: center;
+    line-height: 0px;
+}
+
+.info-card .image img{
+    max-width: 95%;
+}
+
 .section-title{
   text-align: center;
 }
@@ -1220,29 +1221,76 @@ header.dark{
   flex: 1;
 }
 
+.badge{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-10);
+}
+
 .card.action-card{
     width: 100%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-  }
+}
 
 .program{
     background: var(--color-neutral-solid-00);
     color: var(--color-neutral-solid-100);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .program .info{
     display: flex;
     flex-direction: column;
     max-width: 520px;
+    padding: var(--spacing-6);
+}
+
+.program .actions{
+    padding: var(--spacing-6);
 }
 
 .program .bubbles{
     background: red;
-    width: 240px;
+}
+
+/* Styling for the outer container */
+.outer-container {
+    width: 100%;
+    overflow-x: hidden; /* Hide the horizontal scrollbar */
+}
+
+/* Styling for the inner container */
+.inner-container {
+    white-space: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling for the inner container */
+    -ms-overflow-style: none; /* Hide scrollbar on IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+}
+
+/* Hide scrollbar on Chrome, Safari, and newer Edge versions */
+.inner-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Styling for the child divs */
+.child-div {
+    display: inline-block;
+    width: 420px; /* Adjust the width to your preference */
+    height: 632px; /* Adjust the height to your preference */
+    margin: 10px; /* Adjust the margin to create spacing between child divs */
+    background-color: #00B4D8; /* Add your desired background color */
+    border-radius: var(--radius-6);
+    overflow: hidden;
+}
+
+.child-div p{
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) { 
