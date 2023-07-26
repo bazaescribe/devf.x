@@ -1636,7 +1636,7 @@ header.dark{
 }
 
 .info-card .info{
-    padding: var(--spacing-8);
+    padding: var(--base-size-32);
 }
 
 .info-card .image{
@@ -1648,7 +1648,7 @@ header.dark{
     max-width: 95%;
 }
 
-.card-photo{
+.card.horizontal{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1657,13 +1657,22 @@ header.dark{
 
 @media screen and (max-width: 700px) {
     .info-card .info{
-        padding: var(--spacing-7) var(--spacing-5);
+        padding: var(--base-size-32);
     }
 
-    .card-photo{
+    .card.horizontal{
         flex-direction: column;
-        padding: var(--spacing-7) var(--spacing-5);
-        gap: var(--spacing-5);
+        padding: var(--base-size-32);
+        gap: var(--base-size-24);
+    }
+
+    .card.horizontal .photo{
+        text-align: center;
+    }
+
+    .card.horizontal .photo img{
+        width: 95%;
+        align-self: center;
     }
 }
 
