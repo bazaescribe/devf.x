@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000   " />
 
     <title>dev.f | Aprende tecnología</title>
 
@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="atomic.css">
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
     <style>
-         .gradient-div {
-      height: 8px;
-      background: linear-gradient(90deg, #00FFC7, #FF00FF, #6f00ff, #ffa600, #00FFC7); /* Added an extra color stop */
-      background-size: 400% 100%;
-      animation: gradientAnimation 10s linear infinite alternate; /* Adjust the duration (10s) as desired */
-    }
+        .gradient-div {
+            height: 8px;
+            background: linear-gradient(90deg, #00FFC7, #FF00FF, #6f00ff, #ffa600, #00FFC7); /* Added an extra color stop */
+            background-size: 400% 100%;
+            animation: gradientAnimation 10s linear infinite alternate; /* Adjust the duration (10s) as desired */
+        }
 
     @keyframes gradientAnimation {
       0% {
@@ -28,29 +30,74 @@
         background-position: 100% 50%;
       }
     }
-    
     </style>
 
 </head>
 <body>
+
     <nav>
-        <div id="left" class="d-flex gap-016">
-            <div class="logo">
-                <img src="img/assets/devf-hacker-emblem.png" alt="Hacker emblem" class="mobile">
-                <img src="img/assets/white.png" alt="devf logo" class="desktop">
+        <div class="desktop">
+            <div class="menu align-items-center">
+                <div class="logo">
+                    <img src="img/assets/white.png" alt="">
+                </div>
+                <button class="btn third">Ir a campus</button>
+                <button class="btn third">Empleos</button>
             </div>
-            <button class="btn third desktop">Ir a campus</button>
-            <button class="btn third desktop">Comunidad</button>
-        </div>
-        <div id="right" class="d-flex gap-016">
-            <button class="btn second desktop">Contacta un asesor</button>
-            <button class="btn main desktop">Inscríbete ahora</button>
+            <div class="menu">
+                <button class="btn second">Sesiones informativas</button>
+                <button class="btn main">Inscribirme ahora</button>
+            </div>
         </div>
         <div class="mobile">
-            <button class="btn second light">menu</button>
+            <div class="bar">
+                <img src="img/assets/devf-hacker-emblem.png" style="width: 48px;">
+                <button class="btn second" id="menu-toggle">Menú option</button>
+            </div>
+            <div class="tiles">
+                <div class="d-flex gap-016">
+                    <button class="btn big-btn stretch">ir a campus</button>
+                    <button class="btn big-btn stretch">comunidad</button>
+                </div>
+
+                <div class="d-flex flex-direction-column gap-016">
+                    <div class="d-flex gap-016">
+                        <button class="btn big-btn program">
+                            <h3>⌨️</h3>
+                            Programación
+                        </button>
+                    </div>
+                    <div class="d-flex gap-016">
+                        <button class="btn big-btn program stretch">
+                            <h3>📀</h3>
+                            Ciencia de datos
+                        </button>
+                        <button class="btn big-btn program stretch">
+                            <h3>🎨</h3>
+                            Diseño de producto
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <div class="action">
+                        <span>¿Quiénes somos?</span>
+                        <span>👾</span>
+                    </div>
+                    <div class="action">
+                        <span>Casos de éxito</span>
+                        <span>💪</span>
+                    </div>
+                    <div class="action">
+                        <span>Ayuda</span>
+                        <span>💬</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </nav>
-
+    
     <div class="gradient-div"></div>
 
     <header class="container py-160 p-048 d-flex flex-direction-column gap-024 text-center">
@@ -68,7 +115,7 @@
 
     <section id="companies" class="container d-flex flex-direction-column gap-016">
         <p class="text-center">Nuestros egresados trabajan en las empresas más innovadoras</p>
-        <div class="companies-logos">
+        <div class="companies-logos p-016">
             <img src="img/assets/logo/google.png" alt="Logotipo Google" class="align-self-center">
             <img src="img/assets/logo/facebook.png" alt="Logotipo Facebook" class="align-self-center">
             <img src="img/assets/logo/microsoft.png" alt="Logotipo Microsoft" class="align-self-center">
@@ -80,17 +127,19 @@
     </section>
 
     <section id="employability" class="container py-064 d-flex flex-direction-column gap-032">
-        <div class="card bg-primary info-card">
+
+        <div class="card horizontal bg-primary text-main-light">
             <div class="info">
-                <h2>Habilidades de alto valor en el mercado laboral</h2>
+                <h2>Haz despegar tu carrera</h2>
                 <p>
                     Capacítate en las tecnologías más modernas y demandas en la industria tecnológica de hoy... y mañana.
                 </p>
             </div>
-            <div class="image text-center">
-                <img src="img/photos/work-kit.png" alt="Ejemplos de código y diseño UX">
+            <div class="photo text-center pt-024 d-flex align-items-end">
+                <img src="img/photos/rocket.png" alt="" data-aos="fade-up">
             </div>
         </div>
+
         <div class="row gap-032">
             <div class="card outline p-032 d-flex flex-direction-column gap-024">
                 <div class="badge bg-primary">
@@ -113,45 +162,47 @@
         </div>
     </section>
 
+    <!-- Programas -->
+
     <section id="programs" class="container py-064 d-flex flex-direction-column gap-024">
         <h4 class="text-center">Programas</h4>
 
-        <div class="card horizontal bg-white text-main-dark gap-032">
-            <div class="photo">
-                <img src="img/photos/coding-tech.png" alt="HTML, CSS, Javascript, Bases de datos y más" srcset="">
-            </div>
-            <div style="max-width:600px;" class="d-flex flex-direction-column gap-016">
-                <h2>Master en code</h2>
+        <div class="card horizontal bg-white text-main-dark program">
+            <div class="info d-flex flex-direction-column gap-016">
+                <h3>Master en code</h3>
                 <p>
-                    Construye aplicaciones web modernas, seguras y confiables con la tecnología más avanzada disponible.
+                    Capacítate en las tecnologías más modernas y demandas en la industria tecnológica de hoy... y mañana.
                 </p>
                 <button class="btn main align-self-start">ver más</button>
+            </div>
+            <div class="photo text-center d-flex align-items-center">
+                <img src="img/photos/screenshot-coding.png" alt="Aprende programación" data-aos="fade-left">
             </div>
         </div>
 
-        <div class="card horizontal bg-white text-main-dark gap-032">
-            <div class="photo">
-                <img src="img/photos/coding-tech.png" alt="HTML, CSS, Javascript, Bases de datos y más" srcset="">
-            </div>
-            <div style="max-width:600px;" class="d-flex flex-direction-column gap-016">
-                <h2>Master en code</h2>
+        <div class="card horizontal bg-white text-main-dark program">
+            <div class="info d-flex flex-direction-column gap-016">
+                <h3>Master en data</h3>
                 <p>
-                    Construye aplicaciones web modernas, seguras y confiables con la tecnología más avanzada disponible.
+                    Capacítate en las tecnologías más modernas y demandas en la industria tecnológica de hoy... y mañana.
                 </p>
                 <button class="btn main align-self-start">ver más</button>
+            </div>
+            <div class="photo text-center d-flex align-items-center">
+                <img src="img/photos/screenshot-data.png" alt="Aprende data science" data-aos="fade-left">
             </div>
         </div>
 
-        <div class="card horizontal bg-white text-main-dark gap-032">
-            <div class="photo">
-                <img src="img/photos/design-tech.png" alt="UX, UI, Product design, Figma, Product Management" srcset="">
-            </div>
-            <div style="max-width:600px;" class="d-flex flex-direction-column gap-016">
-                <h2>Master en product design</h2>
+        <div class="card horizontal bg-white text-main-dark program">
+            <div class="info d-flex flex-direction-column gap-016">
+                <h3>Master en product design</h3>
                 <p>
-                    Construye aplicaciones web modernas, seguras y confiables con la tecnología más avanzada disponible.
+                    Capacítate en las tecnologías más modernas y demandas en la industria tecnológica de hoy... y mañana.
                 </p>
                 <button class="btn main align-self-start">ver más</button>
+            </div>
+            <div class="photo text-center d-flex align-items-center">
+                <img src="img/photos/screenshot-design.png" alt="Aprende diseño de aplicaciones y sitios web" data-aos="fade-left">
             </div>
         </div>
 
@@ -159,17 +210,19 @@
 
     <section id="methodology" class="container py-064 d-flex flex-direction-column gap-032">
         <h4 class="text-center">Metodología</h4>
-        <div class="card bg-aux-a info-card">
-            <div class="info p-128">
+
+        <div class="card vertical bg-aux-a text-main-light">
+            <div class="info">
                 <h2>Clases en vivo con personas como tú</h2>
                 <p>
                     ¡Vive la experiencia de convivir con cientos de alumnos en toda América Latina y aprende con clases remotas en vivo con tus profesores! Participa desde cualquier lugar, pregunta, aporta y colabora.
                 </p>
             </div>
-            <div class="image text-center">
-                <img src="img/photos/class-screenshot.png" alt="Ejemplos de código y diseño UX">
+            <div class="photo text-center">
+                <img src="img/photos/class-screenshot.png" alt="Ejemplos de código y diseño UX" class="w-100" data-aos="fade-up">
             </div>
         </div>
+
         <div class="row gap-032">
             <div class="card outline p-032 d-flex flex-direction-column gap-024">
                 <div class="badge bg-aux-a">
@@ -190,21 +243,24 @@
                 </p>
             </div>
         </div>
+
     </section>
 
     <section id="community" class="container py-064 d-flex flex-direction-column gap-032">
         <h4 class="text-center">Comunidad</h4>
-        <div class="card bg-dark info-card">
+
+        <div class="card vertical bg-dark text-main-light outline">
             <div class="info">
                 <h2>Hackeando la educación desde 2015</h2>
                 <p>
-                    Nacimos en 2016 en Ciudad de México con la intención de cambiar el mundo y desde entonces hemos llevado la cultura del desarrollo tecnológico a decenas de miles de hispanohablantes en México, América Latina, Estados Unidos y Europa.
+                    ¡Vive la experiencia de convivir con cientos de alumnos en toda América Latina y aprende con clases remotas en vivo con tus profesores! Participa desde cualquier lugar, pregunta, aporta y colabora.
                 </p>
             </div>
-            <div class="image text-center">
-                <img src="img/photos/world.png" alt="Impacto en américa latina">
+            <div class="photo text-center">
+                <img src="img/photos/world.png" alt="Ejemplos de código y diseño UX" class="w-60">
             </div>
         </div>
+
         <div class="row gap-032">
             <div class="card outline p-032 text-center">
                 <h2>12,000</h2>
@@ -222,24 +278,29 @@
     </section>
 
     <section id="more-info" class="container py-064 d-flex flex-direction-column gap-032">
-        <div class="card bg-aux-c text-main-dark info-card">
-            <div class="info d-flex flex-direction-column gap-032">
-                <h2>Trabaja como sensei</h2>
+
+        <div class="card bg-aux-c text-main-dark">
+            <div class="info d-flex flex-direction-column gap-016">
+                <h2>Únete al equipo de senseis</h2>
                 <p>
                     ¿Eres un profesional apasionado por tu área y quieres compartir tus conocimientos? No esperes más y contáctate con nosotros, siempre estamos buscando personas como tú.
                 </p>
-                <button class="btn main align-self-start">iniciar registro</button>
+                <button class="btn main align-self-start">ver más</button>
             </div>
         </div>
-        <div class="card horizontal bg-white text-main-dark">
-            <div style="max-width:600px;" class="info d-flex flex-direction-column gap-032">
+        
+
+        <div class="card horizontal bg-white text-main-dark shadow-large-closer">
+            <div style="max-width:600px;" class="info d-flex flex-direction-column gap-016">
                 <h2>¿Necesitas más información?</h2>
                 <p>
-                    Únete a nuestras sesiones informativas y resuelve todas tus dudas sobre dev.f, nuestros programas, los costos y más.
+                    Únete a nuestras sesiones informativas y resuelve todas tus  dudas sobre dev.f, nuestros programas, los costos y más.
                 </p>
-                <button class="btn main align-self-start">ver sesiones informativas</button>
+                <a href="https://www.eventbrite.com/cc/sesiones-informativas-devf-1022469" target="_blank">
+                    <button class="btn main align-self-start">ver sesiones informativas</button>
+                </a>
             </div>
-            <div class="photo">
+            <div class="photo d-flex align-items-center">
                 <img src="img/photos/info-sesh.png" alt="Sesión informativa de dev.f" srcset="">
             </div>
         </div>
@@ -331,6 +392,20 @@
             </div>
         </div>
 
+        <div>
+            <img src="img/assets/logo/b-corp.png" alt="Empresa B certificada">
+        </div>
+
+        <div>
+            <p class="small text-secondary-light">
+                Copyright © 2022 DEVF LABS. Todos los derechos reservados.
+            </p>
+            <br>
+            <p class="small text-secondary-light">
+                DEV.F ofrece una solución innovadora a la inclusión educativa con programas EdTech que ayudan a las personas a convertirse en desarrolladores de software, dieñadores de producto y científicos de datos, así como obtener habilidades tecnológicas para así conseguir oportunidades laborales de alta calidad de manera ágil y accesible.
+            </p>
+        </div>
+
         <div class="social d-flex">
             <div class="logos d-flex gap-024">
                 <img src="img/assets/logo/tiktok.png" alt="Tik Tok">
@@ -349,6 +424,15 @@
             </div>
         </div>
     </footer>
+
+    <div class="gradient-div"></div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="menu.js"></script>
 
 </body>
 </html>
