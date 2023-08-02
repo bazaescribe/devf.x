@@ -1255,11 +1255,18 @@ nav{
     width: 100%;
     padding: var(--base-size-16) var(--base-size-32);
     box-sizing: border-box;
-    background: var(--color-neutral-alpha-dark-80);
+    background: rgba(0, 0, 0, 0.32);
+    border-bottom: 1px solid var(--color-neutral-alpha-light-10);
     backdrop-filter: blur(64px);
     -webkit-backdrop-filter: blur(64px);
     z-index: 50;
     transition: 1s ease all;
+}
+
+nav img{
+  flex: 0 0 auto;
+  /* Maintain the image's aspect ratio */
+  object-fit: contain;
 }
 
 nav .desktop{
@@ -1717,6 +1724,11 @@ header.dark{
 
 .info-card .image img{
     max-width: 95%;
+}
+
+#call-to-actions{
+  display: flex;
+  gap: 1rem;
 }
 
 
