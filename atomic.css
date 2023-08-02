@@ -258,6 +258,16 @@ li::before {
   margin-right: 10px; /* Adjust the spacing between the bullet and text */
 }
 
+.feather {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
 img {
   -webkit-image-orientation: from-image; /* Safari */
           image-orientation: from-image; /* Standard */
@@ -1010,9 +1020,9 @@ img {
   }
 
   .btn.second {
-    color: white;
+    color: var(--color-neutral-solid-100);
     background: none;
-    border: 1px solid var(--color-neutral-alpha-light-20);
+    border: 1px solid var(--color-neutral-alpha-dark-20);
   }
   
   .btn.second:hover,
@@ -1022,7 +1032,7 @@ img {
   }
 
   .btn.second.light {
-    border: 1px solid var(--color-neutral-alpha-light-40);
+    border: 1px solid var(--color-neutral-alpha-light-20);
     color: var(--color-neutral-solid-00);
     background: none;
   }
@@ -1106,6 +1116,10 @@ img {
     align-items: end;
     justify-content: start;
   }
+
+  a.btn{
+    line-height:normal;
+  }
   
   /* Sizes */
   
@@ -1113,6 +1127,17 @@ img {
     width: 100%;
     padding: 24px 32px;
     font-size: 14px;
+  }
+
+  .btn.menu{
+    background-color: var(--color-neutral-alpha-light-20);
+    border: 1px solid var(--color-neutral-alpha-light-10);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    color: white;
   }
 
   .actions{
@@ -1125,6 +1150,8 @@ img {
     display: flex;
     justify-content: space-between;
     padding: var(--base-size-16);
+    color: var(--color-neutral-solid-00);
+    text-decoration: none;
   }
 
 
@@ -1255,8 +1282,8 @@ nav{
     width: 100%;
     padding: var(--base-size-16) var(--base-size-32);
     box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.32);
-    border-bottom: 1px solid var(--color-neutral-alpha-light-10);
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid var(--neutral-alpha-dark-10);
     backdrop-filter: blur(64px);
     -webkit-backdrop-filter: blur(64px);
     z-index: 50;
@@ -1287,6 +1314,7 @@ nav .mobile{
 nav .mobile .bar{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .tiles{
