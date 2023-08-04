@@ -1392,14 +1392,11 @@ footer .awards{
 
 footer .award{
   width: 280px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--base-size-8);
 }
 
 footer .award img{
   height: 24px;
-  width: auto;
+  margin-bottom: var(--base-size-8);
 }
 
 footer .social{
