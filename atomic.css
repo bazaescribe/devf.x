@@ -236,7 +236,6 @@ h6{ font-size: 1.125rem; font-weight: 700;}
 .capitalize{ text-transform: capitalize; }
 
 ul {
-  list-style-type: none;
   padding: 0px;
 }
 
@@ -244,18 +243,6 @@ li {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-}
-
-li::before {
-  content: '';
-  display: inline-block;
-  width: 20px; /* Adjust the width of the bullet image */
-  height: 20px; /* Adjust the height of the bullet image */
-  background-image: url('img/bullet.png'); /* Replace with your image */
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-clipcta: content-box;
-  margin-right: 10px; /* Adjust the spacing between the bullet and text */
 }
 
 .feather {
@@ -1027,8 +1014,8 @@ img {
   
   .btn.second:hover,
   .btn.second:focus {
-    border: 1px solid var(--color-neutral-alpha-light-20);
-    background: var(--color-neutral-alpha-light-10);
+    border: 1px solid var(--color-neutral-alpha-dark-20);
+    background: var(--color-neutral-alpha-dark-10);
   }
 
   .btn.second.light {
@@ -1294,6 +1281,7 @@ nav img{
   flex: 0 0 auto;
   /* Maintain the image's aspect ratio */
   object-fit: contain;
+  width: var(--base-size-96);
 }
 
 nav .desktop{
@@ -1350,7 +1338,7 @@ footer{
 
 footer img{
   display: block;
-  max-width: 9rem;
+  max-width: 6rem;
   object-fit: contain; /* or object-fit: cover; */
 }
 
@@ -1563,9 +1551,6 @@ header.dark{
   }
 }
 
-
-
-
 .section-title{
   text-align: center;
 }
@@ -1588,6 +1573,11 @@ header.dark{
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.module-list{
+  width: 120px;
+  text-align: left;
 }
 
 
