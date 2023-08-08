@@ -13,10 +13,11 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <script src="swag.js"></script>
 
     <style>
         .gradient-div {
-            height: 8px;
+            height: 6px;
             background: linear-gradient(90deg, #00FFC7, #FF00FF, #6f00ff, #ffa600, #00FFC7); /* Added an extra color stop */
             background-size: 400% 100%;
             animation: gradientAnimation 10s linear infinite alternate; /* Adjust the duration (10s) as desired */
@@ -33,7 +34,7 @@
     </style>
 
 </head>
-<body>
+<body onload="calculateDaysSinceDate(); easterEgg()">
 
     <!---------------------------------------------------------------------Navigation------>
     <nav>
@@ -44,8 +45,8 @@
                         <img src="img/assets/white.png" alt="">
                     </a>
                 </div>
-                <button class="btn third">Ir a campus</button>
-                <button class="btn third">comunidad</button>
+                <button class="btn third light">Ir a campus</button>
+                <button class="btn third light">comunidad</button>
             </div>
             <div class="menu">
                 <button class="btn second light">Sesiones informativas</button>
@@ -58,7 +59,7 @@
                     <img src="img/assets/devf-hacker-emblem.png" style="height: 30px;">
                 </a>
                 <button class="btn menu" id="menu-toggle">
-                    <i data-feather="menu"></i>
+                    <i data-feather="grid"></i>
                 </button>
             </div>
             <div class="tiles">
@@ -131,7 +132,7 @@
             <img src="img/assets/logo/amazon.png" alt="Logotipo Amazon" class="align-self-end">
             <img src="img/assets/logo/apple.png" alt="Logotipo Apple Computer" class="align-self-center">
         </div>
-        <button class="btn third align-self-center">ver más</button>
+        <button class="btn third light align-self-center">ver más</button>
     </section>
 
     <section id="employability" class="container py-064 d-flex flex-direction-column gap-032">
@@ -257,7 +258,7 @@
     <section id="community" class="container py-064 d-flex flex-direction-column gap-032">
         <h4 class="text-center">Comunidad</h4>
 
-        <div class="card vertical bg-dark text-main-light outline">
+        <div class="card vertical bg-dark text-main-light outline" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, #000 100%, rgba(0, 0, 0, 0.60) 100%), url(img/assets/bg/space.png), lightgray 50% / contain no-repeat;">
             <div class="info">
                 <h2>Hackeando la educación desde 2015</h2>
                 <p>
@@ -271,16 +272,46 @@
 
         <div class="row gap-032">
             <div class="card outline p-032 text-center">
-                <h2>12,000</h2>
+                <h2 id="students" data-aos="zoom-in">{students}</h2>
                 <p>
                     estudiantes han concluido sus cursos con nosotros
                 </p>
             </div>
             <div class="card outline p-032 text-center">
-                <h2>2,880,000</h2>
+                <h2 id="hours" data-aos="zoom-in">{hour.compeleted}</h2>
                 <p>
                     horas de teoría y práctica completadas
                 </p>
+            </div>
+        </div>
+
+        <div class="row gap-024">
+            <div class="card bg-aux-b p-064 d-flex flex-direction-column gap-024 text-main-dark">
+                <p>
+                    Confiamos tanto en nuestros programas que estamos dispuestos a tomar la apuesta. Si no encuentras trabajo seis meses después de concluir tu Master, te regresamos tu inversión.
+                </p>
+                <p class="bold">
+                    Ximena Arteaga, Google Developer Expert, Generación 2019
+                </p>
+                <img src="img/photos/users/user-1.png" alt="">
+            </div>
+            <div class="card bg-aux-b p-064 d-flex flex-direction-column gap-024 text-main-dark">
+                <p>
+                    Confiamos tanto en nuestros programas que estamos dispuestos a tomar la apuesta. Si no encuentras trabajo seis meses después de concluir tu Master, te regresamos tu inversión.
+                </p>
+                <p class="bold">
+                    Ximena Arteaga, Google Developer Expert, Generación 2019
+                </p>
+                <img src="img/photos/users/user-2.png" alt="">
+            </div>
+            <div class="card bg-aux-b p-064 d-flex flex-direction-column gap-024 text-main-dark">
+                <p>
+                    Confiamos tanto en nuestros programas que estamos dispuestos a tomar la apuesta. Si no encuentras trabajo seis meses después de concluir tu Master, te regresamos tu inversión.
+                </p>
+                <p class="bold">
+                    Ximena Arteaga, Google Developer Expert, Generación 2019
+                </p>
+                <img src="img/photos/users/user-3.png" alt="">
             </div>
         </div>
     </section>
@@ -359,43 +390,43 @@
             <div class="award">
                 <img src="img/assets/logo/google.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en 2019.
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/bid.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Ganadores del primer lugar en el Desafío de Bootcamps en América Latina del BID Lab en 2020
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/redbox.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Reconocidos con el Premio Redbox como la Startup más innovadora de México en el 2017
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/forbes.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Reconocidos por Forbes como una de las 30 empresas promesa de México en 2018
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/holoniq.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/facebook.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/becalos.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019
                 </p>
             </div>
         </div>
@@ -416,17 +447,36 @@
 
         <div class="social d-flex">
             <div class="logos d-flex gap-024">
-                <img src="img/assets/logo/tiktok.png" alt="Tik Tok">
-                <img src="img/assets/logo/instagram.png" alt="instagram">
-                <img src="img/assets/logo/twitter.png" alt="Twitter">
-                <img src="img/assets/logo/linkedin.png" alt="Linkedin">
-                <img src="img/assets/logo/facebook-circle.png" alt="Facebook profile">
-                <img src="img/assets/logo/youtube.png" alt="Youtube">
-                <img src="img/assets/logo/spotify.png" alt="Spotify">
-                <img src="img/assets/logo/discord.png" alt="Discord server">
+                <a href="https://www.tiktok.com/@devfla?is_from_webapp=1&sender_device=pc" target="_blank">
+                    <img src="img/assets/logo/tiktok.png" alt="Tik Tok">
+                </a>
+                <a href="https://www.instagram.com/devfla" target="_blank">
+                    <img src="img/assets/logo/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/devflatam" target="_blank">
+                    <img src="img/assets/logo/twitter.png" alt="La plataforma previamente conocida como twitter">
+                </a>
+                <a href="https://www.linkedin.com/school/devf" target="_blank">
+                    <img src="img/assets/logo/linkedin.png" alt="Linkedin">
+                </a>
+                <a href="https://www.youtube.com/channel/UCsdosmDCPT4GOxTcCltAfyA" target="_blank">
+                    <img src="img/assets/logo/youtube.png" alt="Youtube">
+                </a>
+                <a href="https://open.spotify.com/user/yzw46qsehl8mbvqin7id55u64?si=esiKygFcTAeRoGDyF3oWXA&nd=1" target="_blank">
+                    <img src="img/assets/logo/spotify.png" alt="Spotify">
+                </a>
+                <a href="https://discord.gg/mhzK5Dwm" target="_blank">
+                    <img src="img/assets/logo/discord.png" alt="Discord server">
+                </a>
+                <a href="https://www.twitch.tv/devflatam" target="_blank">
+                    <img src="img/assets/logo/twitch.png" alt="Canal de Twitch">
+                </a>
+                <a href="https://www.facebook.com/devfla/" target="_blank">
+                    <img src="img/assets/logo/facebook-circle.png" alt="Facebook profile">
+                </a>
             </div>
             <div>
-                <a href="">
+                <a href="https://twitter.com/search?q=gethacky" target="_blank">
                     <h5>#getHacky</h5>
                 </a>
             </div>

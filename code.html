@@ -16,7 +16,7 @@
 
     <style>
         .gradient-div {
-            height: 8px;
+            height: 6px;
             background: linear-gradient(90deg, #00FFC7, #FF00FF, #6f00ff, #ffa600, #00FFC7); /* Added an extra color stop */
             background-size: 400% 100%;
             animation: gradientAnimation 10s linear infinite alternate; /* Adjust the duration (10s) as desired */
@@ -44,8 +44,8 @@
                         <img src="img/assets/white.png" alt="">
                     </a>
                 </div>
-                <button class="btn third">Ir a campus</button>
-                <button class="btn third">Comunidad</button>
+                <button class="btn third light">Ir a campus</button>
+                <button class="btn third light">Comunidad</button>
             </div>
             <div class="menu">
                 <button class="btn second light">Sesiones informativas</button>
@@ -58,7 +58,7 @@
                     <img src="img/assets/devf-hacker-emblem.png" style="height: 30px;">
                 </a>
                 <button class="btn menu" id="menu-toggle">
-                    <i data-feather="menu"></i>
+                    <i data-feather="grid"></i>
                 </button>
             </div>
             <div class="tiles">
@@ -162,41 +162,49 @@
         <h4 class="text-center">Beneficios de estudiar en dev.f</h4>
 
         <div class="row gap-032">
-            <div class="card bg-aux-a outline p-064 d-flex flex-direction-column align-items-center text-center gap-024 " style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 0%, #000 100%, rgba(0, 0, 0, 0.60) 100%), url(img/assets/bg/tech.jpeg), lightgray 50% / cover no-repeat;">
-                <h3>Material de apoyo en campus</h3>
+            <div class="card bg-aux-a outline pd-xl d-flex flex-direction-column justify-content-center gap-024" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 0%, #000 100%, rgba(0, 0, 0, 0.60) 100%), url(img/assets/bg/tech.jpeg), lightgray 50% / cover no-repeat;">
+                <img src="img/assets/campus.png" alt="" style="width: 160px;">
+                <h3>Material de apoyo para ayudarte a crecer</h3>
                 <p>
-                    Cientos de horas en video, lecturas y ejercicios de apoyo a tu disposición para poner en práctica tus habilidades y conseguir experiencia desde tu primer semana en dev.f
+                    Encuentra cientos de horas en video, lecturas y ejercicios de apoyo a tu disposición para poner en práctica tus habilidades y conseguir experiencia en campus
                 </p>
-                <a href="#" class="btn second light">ver más</a>
-                <img src="img/photos/screenshot-campus.png" alt="dev.f campus" class="shadow-medium-closer" style="width: 99%; max-width: 400px;">
+                <a href="#" class="btn second light align-self-start">ver más</a>
             </div>
-            <div class="card outline p-064 d-flex flex-direction-column align-items-center justify-content-center gap-016 text-center text-main-dark" style="background: linear-gradient(180deg, #F2CAA6 0%, #D1F2A6 100%);            ">
-                <img src="img/assets/in-house-certification.png" alt="" style="width: 160px;">
+            <div class="card outline pd-xl d-flex flex-direction-column justify-content-center gap-016 text-main-dark" style="background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);">
+                <div class="image-container">
+                    <img class="background-image" src="img/assets/badge-background.png" alt="Background Image">
+                    <img class="foreground-image" src="img/assets/badge-foreground.png" alt="Background Image">
+                    <div class="center-div">
+                        <img src="img/assets/badge-logo.png" alt="dev.f compact logo">
+                    </div>
+                </div>
                 <h3>Certifica tus conocimientos</h3>
                 <p>
                     Al concluir tu programa recibirás un diploma que acredite las horas de capacitación que recibiste. Además podrás realizar un examen de certificación para validar tu dominio en los temas impartidos durante el master.
                 </p>
-                <a href="#" class="btn second">ver más</a>
+                <a href="#" class="btn second align-self-start">ver más</a>
             </div>
         </div>
 
         <div class="row gap-032">
-            <div class="card bg-aux-a p-064 d-flex flex-direction-column gap-024 text-center align-items-center" style="background: linear-gradient(135deg, #5865F2 0%, #EB459E 100%);">
+            <div class="card bg-aux-a pd-xl d-flex flex-direction-column gap-024 justify-content-center" style="background: linear-gradient(135deg, #5865F2 0%, #EB459E 100%);">
                 <h3>Una comunidad internacional</h3>
                 <p>
                     Con miles de alumnos en más de 30 países podrás conectar con nuevos amigos, socios y mucho más. Únete y comienza a vivir la experiencia dev.f sin costo alguno.
                 </p>
                 <img src="img/assets/logo/powered-by-discord.png" alt="Powered by discord" style="max-width: 160px;">
-                <a href="#" class="btn third">unirme ahora</a>
+                <a href="#" class="btn second light align-self-start">unirme ahora</a>
             </div>
-            <div class="card p-064 d-flex flex-direction-column gap-024 align-content-center text-center" style="background: #691F74;">
+            <div class="card pd-xl d-flex flex-direction-column gap-024 align-content-center" style="background: #691F74;">
                 <h4>
                     ¿Cuánto gana un Full stack developer en México?
                 </h4>
-                <h2>$32,500</h2>
-                <p class="caption">
-                    MXN / mes
-                </p>
+                <div class="d-flex align-items-center gap-012">
+                    <h2>$32,500</h2>
+                    <p class="caption">
+                        MXN / mes
+                    </p>
+                </div>
                 <p>
                     El salario full stack developer promedio en México es de $ 390,000 al año o $200 por hora. Con dev.f estarás preparado para aplicar a una de estas posiciones.
                     <br>
@@ -348,12 +356,131 @@
         </p>
     </section>
 
-    <section id="temario">
-
+    <section id="pricing" class="container">
+        <div class="card light p-048 d-flex flex-direction-column gap-048">
+            <div>
+                <h4>Selecciona el plan que más te convenga</h4>
+                <p>
+                    Elige como quieres manejar tu inscripción a dev.f. Con tu lugar aseguras acceso a los módulos contratados, al material adicional correspondiente y todas las herramientas y actividades de apoyo de dev.f
+                </p>
+            </div>
+            <div class="row gap-024">
+                <div class="card dark shadow-medium-closer">
+                    <div class="gradient-div-2 text-main-light p-008 text-center">
+                        Hasta 10% más barato que el plan mensual 😎
+                    </div>
+                    <div class="p-032 d-flex flex-direction-column">
+                        <div class="">
+                            <h5>Pago anual</h5>
+                            <div class="d-flex align-items-center gap-016">
+                                <h2>$1,249</h2>
+                                <h5>/ mes</h5>
+                            </div>
+                            <ul class="mb-080">
+                                <li class="bold">Haremos un solo cobro por $14,988 MXN</li>
+                                <li>Tendrás acceso asegurado a todos los módulos del master</li>
+                                <li>Meses sin intereses disponibles con tarjetas participantes</li>
+                            </ul>
+                        </div>
+                        
+                        <a href="" class="btn main align-self-start">Inscribirme ahora</a>
+                    </div>
+                </div>
+                <div class="card light p-032 d-flex flex-direction-column justify-content-between">
+                    <div>
+                        <h5>Pago mensual</h5>
+                        <div class="d-flex align-items-center gap-016">
+                            <h2>$1,399</h2>
+                            <h5>/ mes</h5>
+                        </div>
+                        <ul>
+                            <li>Haremos un solo cobro por $14,988 MXN</li>
+                            <li>Tendrás acceso asegurado a todos los módulos del master</li>
+                            <li>Meses sin intereses disponibles con tarjetas participantes</li>
+                        </ul>
+                    </div>
+                    <a href="" class="btn main align-self-start">Inscribirme ahora</a>
+                </div>
+            </div>
+        </div>
     </section>
 
 
     <section id="more-info" class="container py-064 d-flex flex-direction-column gap-032">        
+
+        <div class="bg-dark card">
+            <h4 class="pd-l">Preguntas frecuentes</h4>
+
+            <div class="faq">
+                <div class="question pd-l d-flex justify-content-between">
+                    <span>
+                        ¿Qué beneficios obtengo de DEV.F?
+                    </span>
+                    <i data-feather="plus"></i>
+                </div>
+                <div class="answer pd-l">
+                    <p>
+                        Puedes apoyarte en el momento que quieras de nuestros senseis (instructores) para dudas que tengan que ver con tecnología. Variedad de oportunidades de crecimiento profesional o de empleos, muchos de ellos relacionados con tecnología o en empresas innovadoras. Es una comunidad vibrante de gente diversa con ganas de hacer cosas. Con ellos y ellas podrás compartir tus ideas, iniciativas y potenciales proyectos. De DEV.F han salido contrataciones, socios y socias, y nuevas empresas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question pd-l d-flex justify-content-between">
+                    <span>
+                        ¿Qué pasa si no puedo asistir a alguna de las clases?
+                    </span>
+                    <i data-feather="plus"></i>
+                </div>
+                <div class="answer pd-l">
+                    <p>
+                        No te preocupes, tenemos recursos grabados que podrás consultar después para que puedas estar al corriente.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question pd-l d-flex justify-content-between">
+                    <span>
+                        ¿Qué incluye mi acceso al curso?
+                    </span>
+                    <i data-feather="plus"></i>
+                </div>
+                <div class="answer pd-l">
+                    <ol>
+                        <li>ASESORÍAS:Podrás agendar asesorías personales con tu sensei para resolver dudas o reforzar temas especíﬁcos.</li>
+                        <li>TU PROPIO PORTAFOLIO : Aprenderás a crear tu propio portafolio a lo largo de cada uno de los ejercicios y entregas, lo que te ayudará a la hora de las entrevistas de trabajo.</li>
+                        <li>La comunidad más grande y vibrante de LATAM: Compartirás el aula virtual con alumnos de México, Colombia, Panamá, El Salvador, Guatemala, Costa Rica, Ecuador, República Dominicana y más países de Latinoamérica y el mundo.</li>
+                        <li>EVENTOS DE COMUNIDAD: Acceso inédito pláticas donde aprendes cosas nuevas y a líderes del ecosistema tech en LATAM</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question pd-l d-flex justify-content-between">
+                    <span>
+                        ¿Qué necesito para tomar clases?
+                    </span>
+                    <i data-feather="plus"></i>
+                </div>
+                <div class="answer pd-l">
+                    <p>
+                        Un equipo de computo con las siguientes características
+                    </p>
+                    <ol>
+                        <li>Una conexión a Internet: cableada de banda ancha o inalámbrica (3G o 4G/LTE)</li>
+                        <li>Altavoces y un micrófono: integrados, con conexión USB o inalámbricos Bluetooth</li>
+                        <li>Una cámara web o cámara web HD: integrada, con conexión USB o:</li>
+                        <li>Una cámara HD o videocámara HD con una tarjeta de captura de video<br>
+                            <strong>Nota:</strong> Consulta la lista de dispositivos compatibles.</li>
+                        <li>Software de cámara virtual para usar con programas de transmisión como OBS o cámaras IP<br>
+                            <strong>Nota:</strong> Para macOS, se requiere Zoom client 5.1.1 o superior.</li>                          
+                    </ol>
+                </div>
+            </div>
+
+            
+        </div>
 
         <div class="card horizontal bg-white text-main-dark shadow-large-closer">
             <div style="max-width:600px;" class="info d-flex flex-direction-column gap-016">
@@ -416,43 +543,43 @@
             <div class="award">
                 <img src="img/assets/logo/google.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en 2019.
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/bid.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Ganadores del primer lugar en el Desafío de Bootcamps en América Latina del BID Lab en 2020
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/redbox.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Reconocidos con el Premio Redbox como la Startup más innovadora de México en el 2017
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/forbes.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Reconocidos por Forbes como una de las 30 empresas promesa de México en 2018
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/holoniq.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/facebook.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019
                 </p>
             </div>
             <div class="award">
                 <img src="img/assets/logo/becalos.png" alt="Google">
                 <p class="caption">
-                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019.
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019
                 </p>
             </div>
         </div>
@@ -473,17 +600,36 @@
 
         <div class="social d-flex">
             <div class="logos d-flex gap-024">
-                <img src="img/assets/logo/tiktok.png" alt="Tik Tok">
-                <img src="img/assets/logo/instagram.png" alt="instagram">
-                <img src="img/assets/logo/twitter.png" alt="Twitter">
-                <img src="img/assets/logo/linkedin.png" alt="Linkedin">
-                <img src="img/assets/logo/facebook-circle.png" alt="Facebook profile">
-                <img src="img/assets/logo/youtube.png" alt="Youtube">
-                <img src="img/assets/logo/spotify.png" alt="Spotify">
-                <img src="img/assets/logo/discord.png" alt="Discord server">
+                <a href="https://www.tiktok.com/@devfla?is_from_webapp=1&sender_device=pc" target="_blank">
+                    <img src="img/assets/logo/tiktok.png" alt="Tik Tok">
+                </a>
+                <a href="https://www.instagram.com/devfla" target="_blank">
+                    <img src="img/assets/logo/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/devflatam" target="_blank">
+                    <img src="img/assets/logo/twitter.png" alt="La plataforma previamente conocida como twitter">
+                </a>
+                <a href="https://www.linkedin.com/school/devf" target="_blank">
+                    <img src="img/assets/logo/linkedin.png" alt="Linkedin">
+                </a>
+                <a href="https://www.youtube.com/channel/UCsdosmDCPT4GOxTcCltAfyA" target="_blank">
+                    <img src="img/assets/logo/youtube.png" alt="Youtube">
+                </a>
+                <a href="https://open.spotify.com/user/yzw46qsehl8mbvqin7id55u64?si=esiKygFcTAeRoGDyF3oWXA&nd=1" target="_blank">
+                    <img src="img/assets/logo/spotify.png" alt="Spotify">
+                </a>
+                <a href="https://discord.gg/mhzK5Dwm" target="_blank">
+                    <img src="img/assets/logo/discord.png" alt="Discord server">
+                </a>
+                <a href="https://www.twitch.tv/devflatam" target="_blank">
+                    <img src="img/assets/logo/twitch.png" alt="Canal de Twitch">
+                </a>
+                <a href="https://www.facebook.com/devfla/" target="_blank">
+                    <img src="img/assets/logo/facebook-circle.png" alt="Facebook profile">
+                </a>
             </div>
             <div>
-                <a href="">
+                <a href="https://twitter.com/search?q=gethacky" target="_blank">
                     <h5>#getHacky</h5>
                 </a>
             </div>
@@ -491,6 +637,8 @@
     </footer>
 
     <div class="gradient-div"></div>
+
+    <!-- Scripts -->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -502,6 +650,8 @@
     </script>
 
     <script src="menu.js"></script>
+
+    <script src="faq.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursor Gradient Follow</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    }
+
+    .gradient-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ffcc00, #ff6699); /* Replace these colors with your desired gradient */
+    z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="gradient-container"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const gradientContainer = document.querySelector(".gradient-container");
+
+    gradientContainer.addEventListener("mousemove", (event) => {
+        const { clientX, clientY } = event;
+        const { left, top, width, height } = gradientContainer.getBoundingClientRect();
+
+        const posX = (clientX - left) / width * 100;
+        const posY = (clientY - top) / height * 100;
+
+        const gradientX = posX > 50 ? 100 - posX : posX;
+        const gradientY = posY > 50 ? 100 - posY : posY;
+
+        const gradientStyle = `radial-gradient(circle at ${gradientX}% ${gradientY}%, #ffcc00, #ff6699)`;
+
+        gradientContainer.style.background = gradientStyle;
+    });
+    });
+
+      // Easing function
+  function easeOutQuad(x) {
+    return 1 - (1 - x) * (1 - x);
+  }
+
+  </script>
+</body>
+</html>
