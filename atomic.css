@@ -1323,6 +1323,10 @@ nav .mobile .bar{
     align-items: center;
 }
 
+nav .mobile .bar img{
+  width: 48px;
+}
+
 .tiles{
   display: none;
   flex-direction: column;
