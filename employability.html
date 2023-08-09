@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000   " />
+
+    <title>dev.f | Aprende tecnología</title>
+
+    <link rel="icon" type="image/x-icon" href="img/assets/favicon.png">
+    <link rel="stylesheet" href="atomic.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <style>
+        .gradient-div {
+            height: 6px;
+            background: linear-gradient(90deg, #00FFC7, #FF00FF, #6f00ff, #ffa600, #00FFC7); /* Added an extra color stop */
+            background-size: 400% 100%;
+            animation: gradientAnimation 10s linear infinite alternate; /* Adjust the duration (10s) as desired */
+        }
+
+    @keyframes gradientAnimation {
+        0% {
+        background-position: 0% 50%;
+        }
+        100% {
+        background-position: 100% 50%;
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <!---------------------------------------------------------------------Navigation------>
+    <nav>
+        <div class="desktop">
+            <div class="menu align-items-center">
+                <div class="logo">
+                    <a href="/">
+                        <img src="img/assets/white.png" alt="">
+                    </a>
+                </div>
+                <button class="btn third light">Ir a campus</button>
+                <button class="btn third light">Comunidad</button>
+            </div>
+            <div class="menu">
+                <button class="btn second light">Sesiones informativas</button>
+                <button class="btn main">Inscribirme ahora</button>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="bar">
+                <a href="/">
+                    <img src="img/assets/devf-hacker-emblem.png" style="height: 30px;">
+                </a>
+                <button class="btn menu" id="menu-toggle">
+                    <i data-feather="grid"></i>
+                </button>
+            </div>
+            <div class="tiles">
+                <div class="d-flex gap-016">
+                    <button class="btn big-btn stretch">ir a campus</button>
+                    <button class="btn big-btn stretch">comunidad</button>
+                </div>
+
+
+                <div class="d-flex flex-direction-column gap-016">
+                    <div class="d-flex">
+                        <a href="code.html" class="btn big-btn program" data-aos="fade-up">
+                            <h3>⌨️</h3>
+                            <span>Programación</span>
+                        </a>
+                    </div>
+                    <div class="d-flex gap-016">
+                        <a href="data.html" class="btn big-btn program">
+                            <h3>📀</h3>
+                            <span>Ciencia de datos</span>
+                        </a>
+                        <a href="design.html" class="btn big-btn program">
+                            <h3>🎨</h3>
+                            <span>Diseño</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <a href="#" class="action">
+                        <span>¿Quiénes somos?</span>
+                        <span>👾</span>
+                    </a>
+                    <a href="#" class="action">
+                        <span>Casos de éxito</span>
+                        <span>💪</span>
+                    </a>
+                    <a href="#" class="action">
+                        <span>Ayuda</span>
+                        <span>💬</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!---------------------------------------------------------------------/Navigation------>
+
+    <div class="gradient-div"></div>
+
+    <header class="container py-160 d-flex flex-direction-column gap-024 align-items-start">
+        <h2>
+            Reporte de empleabilidad 2023
+        </h2>
+        <p>
+            Próximamente
+        </p>
+    </header>
+
+    <section class="container">
+        <h4 class="text-left">Empresas que confían en nuestros estudiantes</h4>
+        <p>
+            Desde que nacimos, en dev.f nos hemos preocupado por capacitar profesionales  competentes que respondan a las necesidades de la indsutria tecnológica de América Latina, estas son sólo algunas de las empresas que han confiado en nuestros más de 12,000 alumnos y alumnas.
+        </p>
+        <div id="companies" class="mt-032">
+        </div>
+    </section>
+
+    <footer class="container py-048 d-flex flex-direction-column gap-048">
+        
+        <div>
+            <img src="img/assets/white.png" alt="dev.f logo">
+        </div>
+        <menu>
+            <div class="d-flex flex-direction-column gap-016">
+                <p class="caption text-secondary-light">Sitio</p>
+                <a href="#">Inicio</a>
+                <a href="#">Campus</a>
+                <a href="#">Comunidad</a>
+                <a href="#">Carreras</a>
+            </div>
+            <div class="d-flex flex-direction-column gap-016">
+                <p class="caption text-secondary-light">dev.f</p>
+                <a href="#">Nosotros</a>
+                <a href="#">Empleabilidad</a>
+                <a href="#">Testimoniales</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Conviértete en sensei</a>
+                <a href="#">Becas</a>
+            </div>
+            <div class="d-flex flex-direction-column gap-016">
+                <p class="caption text-secondary-light">Oferta educativa</p>
+                <a href="#">Coding</a>
+                <a href="#">Data science</a>
+                <a href="#">Product design</a>
+            </div>
+            <div class="d-flex flex-direction-column gap-016">
+                <p class="caption text-secondary-light">Legal</p>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Aviso de privacidad</a>
+                <a href="#">Reglamento interno</a>
+            </div>
+            <div class="d-flex flex-direction-column gap-016">
+                <p class="caption text-secondary-light">Para empresas</p>
+                <a href="#">Colaboraciones</a>
+                <a href="#">Capacitamos a tu personal</a>
+            </div>
+        </menu>
+
+        <div class="awards">
+            <div class="award">
+                <img src="img/assets/logo/google.png" alt="Google">
+                <p class="caption">
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en 2019.
+                </p>
+            </div>
+            <div class="award">
+                <img src="img/assets/logo/bid.png" alt="Google">
+                <p class="caption">
+                    Ganadores del primer lugar en el Desafío de Bootcamps en América Latina del BID Lab en 2020
+                </p>
+            </div>
+            <div class="award">
+                <img src="img/assets/logo/redbox.png" alt="Google">
+                <p class="caption">
+                    Reconocidos con el Premio Redbox como la Startup más innovadora de México en el 2017
+                </p>
+            </div>
+            <div class="award">
+                <img src="img/assets/logo/forbes.png" alt="Google">
+                <p class="caption">
+                    Reconocidos por Forbes como una de las 30 empresas promesa de México en 2018
+                </p>
+            </div>
+            <div class="award">
+                <img src="img/assets/logo/holoniq.png" alt="Google">
+                <p class="caption">
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019
+                </p>
+            </div>
+            <div class="award">
+                <img src="img/assets/logo/facebook.png" alt="Google">
+                <p class="caption">
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019
+                </p>
+            </div>
+            <div class="award">
+                <img src="img/assets/logo/becalos.png" alt="Google">
+                <p class="caption">
+                    Una de las 9 Startups seleccionadas por el Google Launchpad Accelerator de LATAM en el 2019
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <img src="img/assets/logo/b-corp.png" alt="Empresa B certificada">
+        </div>
+
+        <div>
+            <p class="small text-secondary-light">
+                Copyright © 2022 DEVF LABS. Todos los derechos reservados.
+            </p>
+            <br>
+            <p class="small text-secondary-light">
+                DEV.F ofrece una solución innovadora a la inclusión educativa con programas EdTech que ayudan a las personas a convertirse en desarrolladores de software, dieñadores de producto y científicos de datos, así como obtener habilidades tecnológicas para así conseguir oportunidades laborales de alta calidad de manera ágil y accesible.
+            </p>
+        </div>
+
+        <div class="social d-flex">
+            <div class="logos d-flex gap-024">
+                <a href="https://www.tiktok.com/@devfla?is_from_webapp=1&sender_device=pc" target="_blank">
+                    <img src="img/assets/logo/tiktok.png" alt="Tik Tok">
+                </a>
+                <a href="https://www.instagram.com/devfla" target="_blank">
+                    <img src="img/assets/logo/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/devflatam" target="_blank">
+                    <img src="img/assets/logo/twitter.png" alt="La plataforma previamente conocida como twitter">
+                </a>
+                <a href="https://www.linkedin.com/school/devf" target="_blank">
+                    <img src="img/assets/logo/linkedin.png" alt="Linkedin">
+                </a>
+                <a href="https://www.youtube.com/channel/UCsdosmDCPT4GOxTcCltAfyA" target="_blank">
+                    <img src="img/assets/logo/youtube.png" alt="Youtube">
+                </a>
+                <a href="https://open.spotify.com/user/yzw46qsehl8mbvqin7id55u64?si=esiKygFcTAeRoGDyF3oWXA&nd=1" target="_blank">
+                    <img src="img/assets/logo/spotify.png" alt="Spotify">
+                </a>
+                <a href="https://discord.gg/mhzK5Dwm" target="_blank">
+                    <img src="img/assets/logo/discord.png" alt="Discord server">
+                </a>
+                <a href="https://www.twitch.tv/devflatam" target="_blank">
+                    <img src="img/assets/logo/twitch.png" alt="Canal de Twitch">
+                </a>
+                <a href="https://www.facebook.com/devfla/" target="_blank">
+                    <img src="img/assets/logo/facebook-circle.png" alt="Facebook profile">
+                </a>
+            </div>
+            <div>
+                <a href="https://twitter.com/search?q=gethacky" target="_blank">
+                    <h5>#getHacky</h5>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="gradient-div"></div>
+    
+    <script src="images.js"></script>
+
+</body>
+</html>
