@@ -1501,6 +1501,15 @@ header.dark{
   flex: 1 0 0 ;
 }
 
+@media screen and (max-width: 768px) { 
+  .sidebar{
+    position: inherit;
+    width: 100%;
+  }
+}
+
+
+
 /* ==================================== cards ==================================== */
 /* SECTION DESCRIPTION HERE */
 
