@@ -20,6 +20,7 @@ function calculateDaysSinceDate() {
     const startingDate = new Date(2015, 5, 2);
     var students = 0;
     var hours = 0;
+    var year = currentDate.getFullYear();
 
     const differenceInTime = currentDate.getTime() - startingDate.getTime();
     const daysSinceDate = Math.floor(differenceInTime / (1000 * 3600 * 24));
@@ -28,6 +29,7 @@ function calculateDaysSinceDate() {
 
     document.getElementById('students').innerHTML = students.toLocaleString();
     document.getElementById('hours').innerHTML = hours.toLocaleString();
+    document.getElementById('year').innerHTML = year; 
 
 }
   

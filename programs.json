@@ -1,0 +1,142 @@
+{
+    "programs": [
+      {
+        "name": "coding",
+        "modules": [
+          {
+            "name": "Intro a la Web",
+            "topics": ["Internet", "HTML", "CSS"]
+          },
+          {
+            "name": "Intro a Javascript",
+            "topics": ["Javascript Vanilla", "CSS Frameworks", "Intro a ES6", "POO", "Terminal y GIT"]
+          },
+          {
+            "name": "Computer Science",
+            "topics": ["Algoritmia", "Estructuras de Datos", "Algoritmos de Búsqueda", "Algoritmos de Ordenamiento"]
+          },
+          {
+            "name": "JS Avanzado",
+            "topics": ["ES6", "Node + NPM", "JS Async", "Arquitectura Cliente-Servidor", "JSON"]
+          },
+          {
+            "name": "Intro a Frontend",
+            "topics": ["SPAs", "React", "Hooks", "Ciclo de vida", "Rutas", "Deployment"]
+          },
+          {
+            "name": "Frontend Avanzado",
+            "topics": ["SASS", "Autenticación", "Estado Global", "Server Side Rendering", "Testing"]
+          },
+          {
+            "name": "Backend + SQL",
+            "topics": ["Diseño de Bases de Datos", "SQL", "PostgresSQL", "REST API", "Deployment"]
+          },
+          {
+            "name": "Backend + NoSQL",
+            "topics": ["MVC", "MongoDB", "Autenticación", "Middleware", "Manejo de Archivos", "Testing"]
+          },
+          {
+            "name": "Full Stack",
+            "topics": ["Proyecto Integrador"]
+          },
+          {
+            "name": "Design Sprint",
+            "topics": ["Ideación y análisis", "Diseño", "Creación de Prototipos", "Pruebas de Usuario"]
+          }
+        ]
+      },
+      {
+        "name": "data_science",
+        "modules": [
+          {
+            "name": "Herramientas para la ciencia de datos",
+            "topics": ["Introducción a la programación con Python.", "Funciones", "Introducción a SQL.", "JOIN"]
+          },
+          {
+            "name": "Introducción a la Ciencia de datos",
+            "topics": ["Data Collect", "Data Manipulation(Pandas)", "Data Modelling", "Data Cleaning", "Data Visualization"]
+          },
+          {
+            "name": "Fundamentos",
+            "topics": ["Álgebra Lineal", "Cálculo para Machine Learning", "Estadística", "Probabilidad"]
+          },
+          {
+            "name": "Data Wrangling",
+            "topics": ["Ingeniería de Datos", "Bases de Datos Relacionales", "Bases No Relacionales", "Data Wrangling + Automatización", "Web Scrapping", "Data Warehouse"]
+          },
+          {
+            "name": "Data Visualization",
+            "topics": ["Gráficas para datos numéricos", "Gráficas para datos categóricos", "Mapas / GIS", "Series de tiempo"]
+          }
+        ]
+      },
+      {
+        "name": "ai",
+        "modules": [
+          {
+            "name": "Machine Learning",
+            "topics": ["Algoritmos de clasificación", "Algoritmos de regresión", "Support Vector Machines", "Random forest & Decision trees", "Aprendizaje no supervisado"]
+          },
+          {
+            "name": "Deep learning",
+            "topics": ["Shallow Neural Networks", "Computer Vision", "Procesamiento de lenguaje natural", "Deep Learning para series de tiempo"]
+          },
+          {
+            "name": "Machine Learning en producción",
+            "topics": ["End-To-End Machine Learning", "Modelos para utilizar con API", "MLFlow", "Data Labeling y Data Augmentation"]
+          },
+          {
+            "name": "Get Certified",
+            "topics": ["Cómo prepararse para el exámen de Tensorflow Certified Developer", "Entrevistas de prueba y mentoría de preparación para una entrevista de trabajo"]
+          }
+        ]
+      },
+      {
+        "name": "ux",
+        "modules": [
+          {
+            "name": "Intro a UX",
+            "topics": ["Design Thinking", "Design Sprint", "Prototipado", "Testing"]
+          },
+          {
+            "name": "Generación de Valor",
+            "topics": ["Service design", "Service Blueprint", "Diagrama de Secuencia", "Bussiness Model Canvas"]
+          },
+          {
+            "name": "Diseño visual",
+            "topics": ["Cómo funciona el color", "Pantalla como elemento 3D", "Branding", "Paletas de colores", "Familias Tipográficas", "Box Model", "Sistema de Columnas"]
+          },
+          {
+            "name": "Proyecto concentrador",
+            "topics": ["Proyecto con cliente real propio por parte del alumno u ONG."]
+          }
+        ]
+      },
+      {
+        "name": "ui",
+        "modules": [
+          {
+            "name": "Intro a UI",
+            "topics": ["Sistemas de diseño", "Diseño atómico", "Componentes", "Variantes", "Auto layout"]
+          },
+          {
+            "name": "UI",
+            "topics": ["Micro interacciones", "Handoff a ingeniería"]
+          },
+          {
+            "name": "Maquetación",
+            "topics": ["HTML", "CSS", "Vanilla JS"]
+          },
+          {
+            "name": "Medición y análisis",
+            "topics": ["Métodos de medición", "Herramientas de medición", "Estadística descriptiva", "Reportes y toma de decisiones"]
+          },
+          {
+            "name": "Proyecto concentrador",
+            "topics": ["Proyecto con cliente real propio por parte del alumno u ONG."]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1469,11 +1469,11 @@ header.dark{
 
 .container{
   width: 95%;
-  max-width: 1240px;
+  max-width: 1280px;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .row{
@@ -1487,11 +1487,25 @@ header.dark{
     box-sizing: border-box; /* To include padding and border in the width calculation */
 }
 
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--base-size-96);
+  box-sizing: border-box;
+  align-self: start;
+  width: 440px;
+}
+
+.main-content {
+  flex: 2;
+  flex: 1 0 0 ;
+}
+
 /* ==================================== cards ==================================== */
 /* SECTION DESCRIPTION HERE */
 
 .card{
-  border-radius: var(--radius-6);
+  border-radius: var(--radius-5);
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -1604,8 +1618,8 @@ header.dark{
     margin-right: auto;
 }
 
-.module-list{
-  width: 160px;
+.module{
+  width: 190px;
   text-align: left;
 }
 
